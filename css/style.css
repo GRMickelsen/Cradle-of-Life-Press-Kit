@@ -358,7 +358,7 @@ h2 { margin: 0; color: #f0e4cf; font-size: 4.25rem; line-height: 1; }
   background: #050505;
   cursor: zoom-in;
 }
-.gallery-open img { width: 100%; aspect-ratio: 16 / 9; object-fit: contain; transition: opacity 180ms ease; }
+.gallery-open img { width: 100%; height: auto; transition: opacity 180ms ease; }
 .gallery-open:hover img { opacity: 0.86; }
 .gallery-item figcaption { display: flex; align-items: start; justify-content: space-between; gap: 1rem; padding: 0.65rem 0.15rem 0; }
 .gallery-item figcaption > span { min-width: 0; }
@@ -607,10 +607,16 @@ h2 { margin: 0; color: #f0e4cf; font-size: 4.25rem; line-height: 1; }
   .site-header { padding-inline: 4vw; }
   .wordmark { font-size: 1.05rem; }
   .wordmark small { display: none; }
-  .hero { min-height: 760px; }
-  .hero-backdrop { background-position: center, 54% 12%; background-size: cover, auto 56%; }
-  .hero-content { padding: 13.5rem 0 16rem; }
-  h1 { font-size: 4.5rem; }
+  .hero { min-height: 870px; }
+  .hero-backdrop {
+    background-image:
+      linear-gradient(0deg, rgba(8, 7, 6, 1) 0%, rgba(8, 7, 6, 0.98) 31%, rgba(8, 7, 6, 0.46) 55%, rgba(8, 7, 6, 0.06) 100%),
+      url("../assets/key-art/cradle-key-art.png");
+    background-position: center, center 68px;
+    background-size: cover, 112% auto;
+  }
+  .hero-content { padding: 19rem 0 16rem; }
+  h1 { font-size: 4.25rem; }
   h2 { font-size: 2.85rem; }
   .hero-genre { font-size: 1.15rem; }
   .hero-hook { font-size: 1.15rem; }
@@ -650,6 +656,10 @@ h2 { margin: 0; color: #f0e4cf; font-size: 4.25rem; line-height: 1; }
   .lightbox { width: 100vw; height: 100vh; padding-top: 3.4rem; border: 0; }
   .lightbox[open] { grid-template-columns: 36px minmax(0, 1fr) 36px; }
   .lightbox figure figcaption { display: grid; }
+}
+
+@media (max-width: 370px) {
+  h1 { font-size: 3.8rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
