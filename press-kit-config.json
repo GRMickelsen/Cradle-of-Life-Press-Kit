@@ -1,0 +1,43 @@
+{
+  "PRESS_EMAIL": "",
+  "DEVELOPER_HEADSHOT": {
+    "src": "",
+    "download": "",
+    "alt": "Portrait of Garrett Mickelsen"
+  },
+  "TRANSPARENT_LOGO": {
+    "png": "",
+    "svg": "",
+    "resolution": ""
+  },
+  "KEY_ART_MASTER": {
+    "src": "",
+    "resolution": ""
+  },
+  "GAMEPLAY_CAPTURES": {
+    "tactical-combat": {
+      "preview": "",
+      "webm": "",
+      "mp4": "",
+      "still": ""
+    },
+    "shimmer-distortion": {
+      "preview": "",
+      "webm": "",
+      "mp4": "",
+      "still": ""
+    },
+    "character-customization": {
+      "preview": "",
+      "webm": "",
+      "mp4": "",
+      "still": ""
+    },
+    "exploration": {
+      "preview": "",
+      "webm": "",
+      "mp4": "",
+      "still": ""
+    }
+  }
+}
