@@ -59,19 +59,21 @@ Press contact: $pressEmail
 
 ONE-SENTENCE DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG where grid combat, hunger, psychological pressure, reality-tearing Shimmers, and the attention of six divided gods shape Caelis's search for the Needle.
+The Cradle of Life is a dark-fantasy tactical RPG where Caelis searches for the Needle, fights on tactical grids, enters reality-warping Shimmers, and draws the attention of six competing gods.
 
 SHORT DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG built around deliberate grid combat and unguided exploration. As Caelis, a weathered warrior searching for the forgotten Needle, players manage Action Points, terrain, weapon reach, Poise, wounds, Hunger, and Psych while investigating a world being torn apart by Shimmers. People and records may contradict each other, and six gods with incompatible visions are paying attention. The currently available Steam demo introduces the journey through Thornvale, its surrounding wilderness, and the first signs of a much larger crisis.
+The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior sent to find a forgotten relic called the Needle. Combat takes place on a grid and uses Action Points, positioning, height, weapon reach, Poise, wounds, Hunger, and Psych. Outside combat, players explore Thornvale without a trail of objective markers, speak with its people, and search for clues in the environment. Shimmers distort familiar places, and six gods begin paying attention to what Caelis does. The Steam demo covers the opening journey through Thornvale.
 
 LONG DESCRIPTION
 
-Across the land, reality-tearing phenomena called Shimmers appear without warning. Villages vanish, ancient things stir beneath the earth, and six gods who have remained silent for centuries begin to speak. The Cradle of Life follows Caelis, a weathered warrior sent to recover a forgotten relic called the Needle, into a conflict where every witness carries a different version of the truth.
+Shimmers are appearing without warning. They change familiar places, and sometimes whole villages disappear. The gods have been silent for centuries, but that silence is ending.
 
-Exploration is built around observation rather than a trail of objective markers. Players talk to people, read what was left behind, and search houses, caves, ruins, and roads for discoveries that may complicate the question they were trying to answer. Hunger and Psych persist outside battle, turning time and unstable places into pressures of their own.
+Caelis is sent to find the Needle, a relic people remember differently depending on whom he asks. His search begins in Thornvale, where the roads, ruins, homes, and surrounding wilderness hold as much information as the people living there. The game does not mark every answer. Players are expected to ask questions, read, and look around.
 
-Combat takes place on a tactical grid. Movement costs Action Points; height, reach, armor, weapon choice, wounds, Poise, and fear alter the shape of each encounter. Caelis's appearance changes in both his world sprite and portrait, while weapon familiarity, Resolve, and decisions shape the survivor he becomes. The Steam demo presents the opening journey through Thornvale and the first encounter with the wider mystery.
+Combat uses a tactical grid and Action Points. Movement, height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so arriving at a fight in poor condition can matter.
+
+Players can customize Caelis's appearance, which is reflected in both his world sprite and portrait. Weapon familiarity, Resolve, and decisions develop over the course of play. The current Steam demo contains the opening section in Thornvale and introduces the Shimmers and the six gods without revealing their larger role.
 
 CONTENT WARNINGS
 
@@ -84,16 +86,16 @@ GAMEPLAY CAPTURES
 Approved captures will use this folder when supplied:
 
 Tactical Combat
-Grid-based tactical combat featuring positioning, Action Points, terrain, height, status effects, and enemy behavior.
+A tactical encounter showing movement, Action Points, terrain, height, status effects, and enemy behavior.
 
 Shimmer Distortion
 A glimpse of the Shimmer and its visual distortion effects.
 
 Character Customization
-The character creation system used to shape the player's version of Caelis.
+A look at Caelis's character creation options.
 
 Exploration
-Exploration through the hand-built world of The Cradle of Life.
+Exploring the roads, ruins, and wilderness around Thornvale.
 
 GIF previews and WebM, MP4, or still-image downloads may be included. No temporary footage has been manufactured.
 "@
@@ -101,9 +103,9 @@ GIF previews and WebM, MP4, or still-image downloads may be included. No tempora
 $developerBiography = @"
 GARRETT MICKELSEN - APPROVED BIOGRAPHY
 
-Garrett Mickelsen is the solo developer behind The Cradle of Life, an independent tactical role-playing game built in RPG Maker MZ. An active-duty U.S. Marine officer and military historian, Mickelsen began developing the game as a personal creative project, drawing on a lifelong interest in history, mythology, and storytelling. Much of the world's earliest lore grew from stories told by his father around campfires when he was young.
+Garrett Mickelsen is the solo developer of The Cradle of Life, an independent tactical RPG made in RPG Maker MZ. He is also an active-duty U.S. Marine officer and military historian. The game began as a personal project built around his interests in history, mythology, and storytelling. Some of its oldest lore came from stories his father told around campfires when he was young.
 
-Developed largely in his spare time while balancing military service and family life, The Cradle of Life combines exploration, choice-driven storytelling, character customization, and grid-based tactical combat in a dark fantasy world shaped by gods, forgotten places, and the consequences of the player's decisions.
+Most of the work is done in his spare time around military service and family life. The game combines exploration, player choice, character customization, and grid-based combat in a dark fantasy setting of gods and forgotten places.
 
 DISCLAIMER
 
