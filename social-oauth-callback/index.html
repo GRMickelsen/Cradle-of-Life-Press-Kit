@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Connecting Social Account - The Cradle of Life</title>
+  <style>
+    :root { color-scheme: dark; font-family: Georgia, serif; background: #100e0d; color: #eee4d2; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; }
+    main { width: min(34rem, calc(100% - 3rem)); border: 1px solid #8b7652; padding: 2rem; background: #191512; }
+    h1 { margin-top: 0; font-size: 1.5rem; }
+    p { line-height: 1.55; }
+    a { color: #f0c777; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Connecting social account</h1>
+    <p id="status">Returning authorization to Marketing Studio...</p>
+    <p><a id="continue" hidden>Continue to Marketing Studio</a></p>
+  </main>
+  <script>
+    (() => {
+      'use strict';
+      const allowed = new Set(['code', 'state', 'error', 'error_reason', 'error_description']);
+      const incoming = new URLSearchParams(location.search);
+      const outgoing = new URLSearchParams();
+      for (const [key, value] of incoming) if (allowed.has(key)) outgoing.append(key, value);
+      const status = document.getElementById('status');
+      const link = document.getElementById('continue');
+      if (!outgoing.has('state') || (!outgoing.has('code') && !outgoing.has('error'))) {
+        status.textContent = 'The authorization response is incomplete. Return to Marketing Studio and start the connection again.';
+        return;
+      }
+      const destination = `http://127.0.0.1:4319/oauth/callback/social?${outgoing}`;
+      link.href = destination;
+      link.hidden = false;
+      window.location.replace(destination);
+    })();
+  </script>
+</body>
+</html>
