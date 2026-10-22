@@ -524,6 +524,28 @@ h2 { margin: 0; color: #f0e4cf; font-size: 4.25rem; line-height: 1; }
 }
 .site-footer p { margin: 0; }
 .site-footer code { color: #a99b86; }
+.footer-links { display: flex; gap: 1.25rem; }
+
+.legal-page .site-header { position: sticky; }
+.legal-main {
+  width: min(820px, 92vw);
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+.legal-main h1 { margin-bottom: 0.5rem; font-size: clamp(3.2rem, 8vw, 6rem); }
+.legal-main h2 { margin: 2.75rem 0 0.75rem; font-size: clamp(1.8rem, 4vw, 2.7rem); }
+.legal-main h3 { margin: 1.75rem 0 0.5rem; font-size: 1.25rem; }
+.legal-main p,
+.legal-main li { color: var(--paper-muted); }
+.legal-main strong { color: var(--paper); }
+.legal-meta { margin: 0 0 3rem; color: var(--amber); }
+.legal-note {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--amber);
+  background: rgba(218, 176, 91, 0.08);
+}
+.legal-main ul { padding-left: 1.25rem; }
 
 .lightbox {
   width: min(96vw, 1500px);
@@ -653,6 +675,7 @@ h2 { margin: 0; color: #f0e4cf; font-size: 4.25rem; line-height: 1; }
   .download-contents ul { columns: 1; }
   .site-footer { display: block; }
   .site-footer p + p { margin-top: 0.5rem; }
+  .footer-links { margin-top: 0.75rem; }
   .lightbox { width: 100vw; height: 100vh; padding-top: 3.4rem; border: 0; }
   .lightbox[open] { grid-template-columns: 36px minmax(0, 1fr) 36px; }
   .lightbox figure figcaption { display: grid; }
