@@ -1402,3 +1402,81 @@ a:hover { color: #efda98; }
   .pantheon-grid img { padding: 7px; }
   .headshot-frame { padding: 13px 13px 22px; }
 }
+
+/* Targeted interaction and frame correction. */
+.hero-actions .button,
+.hero-actions .button-primary,
+.hero-actions .button-secondary,
+.hero-actions .button-ghost {
+  position: relative;
+  isolation: isolate;
+  min-height: 54px;
+  padding: 0.85rem 1.55rem;
+  overflow: hidden;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../assets/cradle-interface/command-idle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #eee5d1;
+}
+
+.hero-actions .button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: url("../assets/cradle-interface/command-selected.png") center / 100% 100% no-repeat;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.hero-actions .button > span {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-actions .button:hover,
+.hero-actions .button:focus-visible {
+  background-color: transparent;
+  background-image: url("../assets/cradle-interface/command-idle.png");
+  color: #fff7e8;
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.hero-actions .button:hover::before,
+.hero-actions .button:focus-visible::before {
+  opacity: 1;
+}
+
+.gallery-item { padding: 0; }
+
+.gallery-open {
+  overflow: hidden;
+  border: 1px solid rgba(185, 163, 99, 0.34);
+  border-image: none;
+  background: #030403;
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.34);
+}
+
+.gallery-open:hover {
+  border-color: var(--amber);
+  filter: brightness(1.06);
+}
+
+.headshot-frame { padding: 0; }
+.headshot-frame::before,
+.headshot-frame::after { display: none; }
+.developer-headshot img { border: 1px solid rgba(185, 163, 99, 0.34); }
+.developer-headshot figcaption { margin-top: 0.7rem; text-align: left; }
+
+@media (max-width: 620px) {
+  .hero-actions .button { min-height: 58px; }
+  .gallery-item { padding: 0; }
+  .gallery-open { border-width: 1px; }
+  .gallery-item figcaption { padding-inline: 0.15rem; }
+  .headshot-frame { padding: 0; }
+}
