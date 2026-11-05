@@ -1267,14 +1267,14 @@ a:hover { color: #efda98; }
 }
 .button-primary {
   background-color: transparent;
-  background-image: url("../assets/ui/command-selected.png");
+  background-image: url("../assets/cradle-interface/command-selected.png");
   box-shadow: none;
   color: #fff2dc;
 }
 .button-secondary {
   border: 0;
   background-color: transparent;
-  background-image: url("../assets/ui/command-idle.png");
+  background-image: url("../assets/cradle-interface/command-idle.png");
 }
 .button-primary:hover,
 .button-secondary:hover {
@@ -1315,7 +1315,7 @@ a:hover { color: #efda98; }
 .gallery-open {
   overflow: visible;
   border: 30px solid transparent;
-  border-image-source: url("../assets/ui/ornate-frame.png");
+  border-image-source: url("../assets/cradle-interface/ornate-frame.png");
   border-image-slice: 70 55 64;
   border-image-width: 30px;
   border-image-outset: 7px;
@@ -1335,7 +1335,7 @@ a:hover { color: #efda98; }
 .capture-card,
 .trailer-poster {
   border: 22px solid transparent;
-  border-image-source: url("../assets/ui/ornate-frame.png");
+  border-image-source: url("../assets/cradle-interface/ornate-frame.png");
   border-image-slice: 70 55 64;
   border-image-width: 24px;
   border-image-outset: 3px;
@@ -1352,7 +1352,7 @@ a:hover { color: #efda98; }
   z-index: 2;
   aspect-ratio: 1 / 1;
   pointer-events: none;
-  background: url("../assets/ui/portrait-frame.png") center / 100% 100% no-repeat;
+  background: url("../assets/cradle-interface/portrait-frame.png") center / 100% 100% no-repeat;
 }
 .pantheon-grid figure::after { display: none; }
 .pantheon-grid img { height: auto; padding: 12px; }
@@ -1364,7 +1364,7 @@ a:hover { color: #efda98; }
   width: auto;
   height: auto;
   border: 0;
-  background: url("../assets/ui/portrait-frame.png") center / 100% 100% no-repeat;
+  background: url("../assets/cradle-interface/portrait-frame.png") center / 100% 100% no-repeat;
 }
 .headshot-frame::after { display: none; }
 .developer-headshot img { border: 0; }
@@ -1378,7 +1378,7 @@ a:hover { color: #efda98; }
 
 .download-contents {
   border: 22px solid transparent;
-  border-image-source: url("../assets/ui/panel-wide.png");
+  border-image-source: url("../assets/cradle-interface/panel-wide.png");
   border-image-slice: 28;
   border-image-width: 18px;
   border-image-outset: 2px;
