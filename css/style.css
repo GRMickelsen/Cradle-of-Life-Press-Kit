@@ -1226,3 +1226,179 @@ body::after {
 @media (max-width: 620px) {
   .hero-grid { left: 48%; right: -35%; }
 }
+
+/* Native Cradle UI pass: interface color and artwork come from the game. */
+:root {
+  --paper: #e3ddce;
+  --paper-muted: #aaa99d;
+  --amber: #b19d67;
+  --amber-bright: #d5c284;
+  --moss: #89927d;
+  --iron: #767b74;
+  --line: rgba(178, 166, 127, 0.2);
+  --line-strong: rgba(185, 163, 99, 0.5);
+}
+
+a { color: #c9b574; }
+a:hover { color: #efda98; }
+:focus-visible { outline-color: var(--amber-bright); }
+
+.wordmark small,
+.site-nav .nav-download,
+.eyebrow,
+.hero-genre { color: var(--amber-bright); }
+.site-nav a:hover { color: #eee6d5; text-shadow: 0 0 18px rgba(188, 158, 88, 0.35); }
+.hero .eyebrow span { color: var(--moss); }
+.hero-genre { letter-spacing: 0.075em; }
+
+.button {
+  min-height: 54px;
+  padding: 0.85rem 1.55rem;
+  overflow: visible;
+  border: 0;
+  clip-path: none;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #eee5d1;
+  text-shadow: 0 2px 3px #000;
+  transition: filter 160ms ease, transform 160ms ease, color 160ms ease;
+}
+.button-primary {
+  background-color: transparent;
+  background-image: url("../assets/ui/command-selected.png");
+  box-shadow: none;
+  color: #fff2dc;
+}
+.button-secondary {
+  border: 0;
+  background-color: transparent;
+  background-image: url("../assets/ui/command-idle.png");
+}
+.button-primary:hover,
+.button-secondary:hover {
+  border: 0;
+  background-color: transparent;
+  color: #fff8e9;
+  filter: brightness(1.18) saturate(1.06);
+  transform: translateY(-1px);
+}
+.button-ghost {
+  min-height: 46px;
+  padding-inline: 1rem;
+  border-left: 1px solid rgba(181, 158, 91, 0.38);
+  background-image: none;
+  color: #c8c3b5;
+}
+.button-ghost:hover { color: var(--amber-bright); filter: none; }
+
+.hero-facts dt,
+.fact-grid dt,
+.developer-facts dt,
+.policy-list dt,
+.pronunciation-grid dt { color: var(--moss); }
+.section::before {
+  background: var(--amber);
+  box-shadow: 82px 0 rgba(137, 146, 125, 0.9), 164px 0 rgba(153, 48, 54, 0.7);
+}
+
+.copy-button {
+  border-color: rgba(185, 163, 99, 0.58);
+  background: rgba(79, 63, 35, 0.2);
+  color: var(--amber-bright);
+}
+.copy-button:hover { border-color: var(--amber-bright); background: rgba(185, 163, 99, 0.11); }
+.feature-number { border-color: rgba(185, 163, 99, 0.58); color: var(--amber-bright); }
+
+.gallery-item { padding: 12px; }
+.gallery-open {
+  overflow: visible;
+  border: 30px solid transparent;
+  border-image-source: url("../assets/ui/ornate-frame.png");
+  border-image-slice: 70 55 64;
+  border-image-width: 30px;
+  border-image-outset: 7px;
+  border-image-repeat: stretch;
+  background: #030403;
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.34);
+}
+.gallery-open:hover { border-color: transparent; filter: brightness(1.06); }
+.gallery-open::after {
+  right: 8px;
+  bottom: 8px;
+  background: rgba(8, 9, 8, 0.9);
+  color: var(--amber-bright);
+}
+.gallery-item figcaption { padding-inline: 1.2rem; }
+
+.capture-card,
+.trailer-poster {
+  border: 22px solid transparent;
+  border-image-source: url("../assets/ui/ornate-frame.png");
+  border-image-slice: 70 55 64;
+  border-image-width: 24px;
+  border-image-outset: 3px;
+  border-image-repeat: stretch;
+}
+.capture-preview { border-bottom-color: rgba(185, 163, 99, 0.26); }
+
+.pantheon-grid { gap: 0.45rem; padding: 0.45rem; border-color: rgba(185, 163, 99, 0.28); }
+.pantheon-grid figure { border: 0; }
+.pantheon-grid figure::before {
+  content: "";
+  position: absolute;
+  inset: -3px -3px auto;
+  z-index: 2;
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+  background: url("../assets/ui/portrait-frame.png") center / 100% 100% no-repeat;
+}
+.pantheon-grid figure::after { display: none; }
+.pantheon-grid img { height: auto; padding: 12px; }
+.pantheon-grid figcaption { margin: 0 8px 8px; border-top-color: rgba(185, 163, 99, 0.28); }
+
+.headshot-frame { padding: 18px 18px 28px; }
+.headshot-frame::before {
+  inset: 0 0 42px;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: url("../assets/ui/portrait-frame.png") center / 100% 100% no-repeat;
+}
+.headshot-frame::after { display: none; }
+.developer-headshot img { border: 0; }
+.developer-headshot figcaption {
+  position: relative;
+  z-index: 3;
+  margin-top: 0.85rem;
+  padding-top: 0;
+  text-align: center;
+}
+
+.download-contents {
+  border: 22px solid transparent;
+  border-image-source: url("../assets/ui/panel-wide.png");
+  border-image-slice: 28;
+  border-image-width: 18px;
+  border-image-outset: 2px;
+  border-image-repeat: stretch;
+  background: rgba(7, 10, 9, 0.91);
+}
+.download-contents > span { color: var(--amber-bright); }
+.lightbox { border-color: rgba(185, 163, 99, 0.64); }
+
+@media (max-width: 620px) {
+  .button { min-height: 58px; }
+  .button-ghost { min-height: 48px; }
+  .gallery-item { padding: 6px; }
+  .gallery-open {
+    border-width: 20px;
+    border-image-width: 22px;
+    border-image-outset: 3px;
+  }
+  .gallery-item figcaption { padding-inline: 0.6rem; }
+  .pantheon-grid { gap: 0.25rem; padding: 0.25rem; }
+  .pantheon-grid img { padding: 7px; }
+  .headshot-frame { padding: 13px 13px 22px; }
+}
