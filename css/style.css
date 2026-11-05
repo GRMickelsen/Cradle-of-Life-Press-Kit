@@ -1086,3 +1086,143 @@ h2 { color: #e8e4da; letter-spacing: -0.02em; }
   .hero-coordinate { display: none; }
   .developer-section { padding-inline: 0; border-inline: 0; background: transparent; }
 }
+
+/* Dark-fantasy correction: keep the Shimmer ray, age the world around it. */
+:root {
+  --ink: #0b0e10;
+  --ink-deep: #050708;
+  --panel: #121716;
+  --panel-raised: #19201d;
+  --paper: #e4dfd1;
+  --paper-muted: #b4b5aa;
+  --amber: #a9965e;
+  --amber-bright: #d2bd78;
+  --shimmer-blue: #9caeaa;
+  --moss: #6f7c68;
+  --iron: #68706f;
+  --line: rgba(154, 158, 145, 0.18);
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 82% 14%, rgba(108, 75, 174, 0.08), transparent 34rem),
+    radial-gradient(circle at 16% 56%, rgba(82, 99, 73, 0.08), transparent 42rem),
+    linear-gradient(180deg, #0a0e0f, #0d1211 48%, #080b0c);
+}
+
+body::after {
+  background-image:
+    repeating-linear-gradient(102deg, rgba(219, 210, 184, 0.018) 0 1px, transparent 1px 11px),
+    radial-gradient(ellipse at center, transparent 44%, rgba(0, 0, 0, 0.24) 100%);
+  background-size: auto, cover;
+  mask-image: none;
+}
+
+.site-header {
+  border-bottom-color: rgba(161, 146, 96, 0.24);
+  background: rgba(6, 9, 10, 0.9);
+}
+.site-header::after {
+  background: linear-gradient(90deg, transparent, rgba(116, 130, 107, 0.8) 22%, rgba(141, 120, 255, 0.72) 51%, rgba(153, 48, 54, 0.72) 67%, transparent 88%);
+}
+.wordmark small { color: var(--amber); }
+.site-nav a { letter-spacing: 0.055em; }
+.site-nav .nav-download { color: var(--amber-bright); }
+
+.hero-grid {
+  inset: 68px -8% 0 43%;
+  opacity: 0.19;
+  background-image:
+    repeating-radial-gradient(circle at 54% 48%, transparent 0 69px, rgba(200, 187, 145, 0.2) 70px 71px, transparent 72px 139px),
+    linear-gradient(73deg, transparent 49.85%, rgba(200, 187, 145, 0.2) 50%, transparent 50.15%),
+    linear-gradient(17deg, transparent 49.85%, rgba(200, 187, 145, 0.16) 50%, transparent 50.15%);
+  background-size: auto;
+  mask-image: radial-gradient(circle at 58% 48%, #000 0 52%, transparent 77%);
+  transform: rotate(-4deg) scale(1.08);
+}
+
+.eyebrow {
+  color: var(--amber-bright);
+  font-family: "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.11em;
+}
+.hero .eyebrow span { color: #899087; }
+.hero-coordinate {
+  color: rgba(202, 194, 166, 0.48);
+  font-family: "Cradle Display", Georgia, serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+}
+.hero-genre { color: #b9a9f6; letter-spacing: 0.085em; }
+
+.button { letter-spacing: 0.055em; }
+.button-primary {
+  background: linear-gradient(180deg, #a83038, #812229);
+  box-shadow: inset 5px 0 #d7635d, inset 0 1px rgba(255, 228, 210, 0.2);
+}
+.button-secondary {
+  border-color: rgba(154, 158, 145, 0.42);
+  background: linear-gradient(180deg, rgba(34, 39, 38, 0.94), rgba(18, 22, 23, 0.94));
+}
+.button-secondary:hover { border-color: var(--amber); background: rgba(65, 66, 58, 0.42); }
+.button-ghost { border-left-color: rgba(169, 150, 94, 0.38); }
+
+.hero-facts dt,
+.fact-grid dt,
+.developer-facts dt,
+.policy-list dt,
+.pronunciation-grid dt {
+  color: #aeb7aa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.055em;
+}
+
+.section::before {
+  width: 72px;
+  background: var(--amber);
+  box-shadow: 82px 0 rgba(111, 124, 104, 0.9), 164px 0 rgba(141, 120, 255, 0.44);
+}
+.section-heading::after { background: linear-gradient(90deg, var(--amber), rgba(169, 150, 94, 0)); }
+
+.fact-grid div {
+  background:
+    radial-gradient(circle at 100% 0, rgba(113, 128, 109, 0.055), transparent 58%),
+    rgba(16, 22, 21, 0.84);
+}
+.fact-grid div:hover { background: rgba(29, 34, 31, 0.9); }
+
+.feature-number {
+  border-color: rgba(169, 150, 94, 0.5);
+  background: rgba(169, 150, 94, 0.07);
+  color: var(--amber-bright);
+  font-family: "Cradle Display", Georgia, serif;
+  font-size: 0.92rem;
+}
+
+.gallery-open::after {
+  content: "View / full size";
+  color: var(--paper);
+  font-family: "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.055em;
+}
+
+.trailer-section::before,
+.download-section::before {
+  background-image:
+    repeating-radial-gradient(circle at 75% 50%, transparent 0 82px, rgba(185, 168, 116, 0.055) 83px 84px, transparent 85px 164px),
+    linear-gradient(25deg, transparent 49.9%, rgba(141, 120, 255, 0.05) 50%, transparent 50.1%);
+  background-size: auto;
+}
+.world-copy { border-left-color: var(--amber); }
+.developer-section {
+  background:
+    radial-gradient(circle at 0 0, rgba(111, 124, 104, 0.08), transparent 46%),
+    rgba(13, 18, 18, 0.76);
+  border-inline-color: rgba(169, 150, 94, 0.14);
+}
+.headshot-frame::before { border-color: var(--amber); }
+.developer-headshot figcaption { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: 0.05em; }
+
+@media (max-width: 620px) {
+  .hero-grid { left: 48%; right: -35%; }
+}
