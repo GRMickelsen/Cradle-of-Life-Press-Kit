@@ -1,8 +1,8 @@
 {
   "PRESS_EMAIL": "",
   "DEVELOPER_HEADSHOT": {
-    "src": "",
-    "download": "",
+    "src": "assets/developer/garrett-mickelsen-headshot.jpg",
+    "download": "assets/developer/garrett-mickelsen-headshot.jpg",
     "alt": "Portrait of Garrett Mickelsen"
   },
   "TRANSPARENT_LOGO": {
