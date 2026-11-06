@@ -1483,7 +1483,7 @@ a:hover { color: #efda98; }
 
 /* Developer image pair and unframed trailer media. */
 .trailer-poster {
-  border: 1px solid rgba(185, 163, 99, 0.34);
+  border: 0;
   border-image: none;
 }
 
