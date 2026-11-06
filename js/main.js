@@ -184,7 +184,7 @@
     for (const card of document.querySelectorAll("[data-capture-id]")) {
       const capture = captures[card.dataset.captureId] || {};
       const entries = await Promise.all(
-        ["preview", "webm", "mp4", "still"].map(async (key) => [key, capture[key], await resourceExists(capture[key])])
+        ["preview", "gif", "webm", "mp4", "still"].map(async (key) => [key, capture[key], await resourceExists(capture[key])])
       );
       const available = Object.fromEntries(entries.filter(([, , exists]) => exists).map(([key, path]) => [key, path]));
       if (Object.keys(available).length === 0) continue;
@@ -202,6 +202,9 @@
         image.hidden = false;
       } else if (video) {
         if (available.still) video.poster = available.still;
+        video.autoplay = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        video.muted = true;
+        video.loop = true;
         const videoPaths = [available.webm, available.mp4, available.preview].filter(Boolean);
         for (const path of [...new Set(videoPaths)]) {
           if (/\.(?:webm|mp4)(?:\?.*)?$/i.test(path)) {
@@ -211,7 +214,11 @@
             video.append(source);
           }
         }
-        if (video.querySelector("source")) video.hidden = false;
+        if (video.querySelector("source")) {
+          video.hidden = false;
+          video.load();
+          if (video.autoplay) video.play().catch(() => {});
+        }
       }
 
       const addedDownloads = new Set();
@@ -220,9 +227,12 @@
         addCaptureDownload(downloads, path, label);
         addedDownloads.add(path);
       };
-      addUniqueDownload(available.preview, /\.gif(?:\?.*)?$/i.test(available.preview || "") ? "Download GIF" : "Download preview");
+      addUniqueDownload(available.gif, "Download GIF");
       addUniqueDownload(available.webm, "Download WebM");
       addUniqueDownload(available.mp4, "Download MP4");
+      if (available.preview && ![available.gif, available.webm, available.mp4].includes(available.preview)) {
+        addUniqueDownload(available.preview, "Download preview");
+      }
       addUniqueDownload(available.still, "Download still");
 
       card.hidden = false;
