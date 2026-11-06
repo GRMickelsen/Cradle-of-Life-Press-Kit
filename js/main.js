@@ -38,7 +38,10 @@
   const lightboxImage = lightbox?.querySelector("[data-lightbox-image]");
   const lightboxCaption = lightbox?.querySelector("[data-lightbox-caption]");
   const lightboxDownload = lightbox?.querySelector("[data-lightbox-download]");
+  const lightboxCounter = lightbox?.querySelector("[data-lightbox-counter]");
   let activeGalleryIndex = 0;
+  let lightboxTrigger = null;
+  let lightboxHistoryActive = false;
 
   const showGalleryImage = (index) => {
     if (!lightbox || !lightboxImage || !lightboxCaption || !lightboxDownload || galleryButtons.length === 0) return;
@@ -52,31 +55,79 @@
     lightboxImage.alt = thumbnail?.alt || "The Cradle of Life screenshot";
     lightboxCaption.textContent = button.dataset.caption || "The Cradle of Life screenshot";
     lightboxDownload.href = source;
+    if (lightboxCounter) lightboxCounter.textContent = `${activeGalleryIndex + 1} / ${galleryButtons.length}`;
+
+    if (lightboxHistoryActive && history.state?.cradleLightbox) {
+      history.replaceState(history.state, "", `${location.pathname}${location.search}#screenshot-${activeGalleryIndex + 1}`);
+    }
+  };
+
+  const restoreGalleryFocus = () => {
+    const trigger = lightboxTrigger;
+    lightboxTrigger = null;
+    window.requestAnimationFrame(() => trigger?.focus({ preventScroll: true }));
+  };
+
+  const closeLightbox = ({ fromHistory = false } = {}) => {
+    if (lightbox?.hasAttribute("open")) {
+      if (!lightbox.classList.contains("lightbox-fallback") && typeof lightbox.close === "function") {
+        lightbox.close();
+      } else {
+        lightbox.removeAttribute("open");
+      }
+    }
+    lightbox?.classList.remove("lightbox-fallback");
+    document.body.classList.remove("lightbox-open");
+
+    if (!fromHistory && lightboxHistoryActive && history.state?.cradleLightbox) {
+      lightboxHistoryActive = false;
+      restoreGalleryFocus();
+      history.back();
+    } else {
+      lightboxHistoryActive = false;
+      restoreGalleryFocus();
+    }
   };
 
   galleryButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
-      if (!lightbox || typeof lightbox.showModal !== "function") {
-        window.open(button.dataset.full, "_blank", "noopener");
-        return;
-      }
+      if (!lightbox) return;
 
+      lightboxTrigger = button;
       showGalleryImage(index);
-      lightbox.showModal();
+      if (typeof lightbox.showModal === "function") {
+        lightbox.showModal();
+      } else {
+        lightbox.classList.add("lightbox-fallback");
+        lightbox.setAttribute("open", "");
+      }
+      document.body.classList.add("lightbox-open");
+      history.pushState({ ...(history.state || {}), cradleLightbox: true }, "", `${location.pathname}${location.search}#screenshot-${index + 1}`);
+      lightboxHistoryActive = true;
+      lightbox.querySelector("[data-lightbox-close]")?.focus({ preventScroll: true });
     });
   });
 
-  lightbox?.querySelector("[data-lightbox-close]")?.addEventListener("click", () => lightbox.close());
+  lightbox?.querySelector("[data-lightbox-close]")?.addEventListener("click", () => closeLightbox());
   lightbox?.querySelector("[data-lightbox-prev]")?.addEventListener("click", () => showGalleryImage(activeGalleryIndex - 1));
   lightbox?.querySelector("[data-lightbox-next]")?.addEventListener("click", () => showGalleryImage(activeGalleryIndex + 1));
 
   lightbox?.addEventListener("click", (event) => {
-    if (event.target === lightbox) lightbox.close();
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  lightbox?.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeLightbox();
   });
 
   lightbox?.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") showGalleryImage(activeGalleryIndex - 1);
     if (event.key === "ArrowRight") showGalleryImage(activeGalleryIndex + 1);
+  });
+
+  window.addEventListener("popstate", () => {
+    if (lightbox?.hasAttribute("open")) closeLightbox({ fromHistory: true });
   });
 
   const resourceExists = async (path) => {

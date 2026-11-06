@@ -504,7 +504,10 @@ The Steam demo contains the opening section in Thornvale and introduces the Shim
   </footer>
 
   <dialog class="lightbox" data-lightbox aria-labelledby="lightbox-caption">
-    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close full-screen image">&times;</button>
+    <div class="lightbox-toolbar">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image and return to the screenshot gallery"><span aria-hidden="true">&#8592;</span><span>Back to gallery</span></button>
+      <span class="lightbox-counter" aria-live="polite" data-lightbox-counter></span>
+    </div>
     <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Previous screenshot">&#8592;</button>
     <figure>
       <img src="assets/screenshots/01-tactical-combat-forest.jpg" alt="" data-lightbox-image>
@@ -513,6 +516,6 @@ The Steam demo contains the opening section in Thornvale and introduces the Shim
     <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Next screenshot">&#8594;</button>
   </dialog>
 
-  <script src="js/main.js?v=20261106-press-upgrade" defer></script>
+  <script src="js/main.js?v=20261106-mobile-lightbox-2" defer></script>
 </body>
 </html>
