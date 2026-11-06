@@ -798,7 +798,7 @@ a:hover { color: #d8d2ff; }
   z-index: 1;
   top: -12%;
   bottom: -18%;
-  left: 62%;
+  left: 82%;
   width: clamp(70px, 9vw, 150px);
   opacity: 0.78;
   background:
@@ -1070,7 +1070,7 @@ h2 { color: #e8e4da; letter-spacing: -0.02em; }
     background-position: center, center 17%;
     background-size: cover, auto 68%;
   }
-  .hero-rift { left: 70%; }
+  .hero-rift { left: 76%; }
 }
 
 @media (max-width: 620px) {
