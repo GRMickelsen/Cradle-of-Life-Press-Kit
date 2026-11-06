@@ -16,16 +16,16 @@
   },
   "GAMEPLAY_CAPTURES": {
     "tactical-combat": {
-      "preview": "assets/gameplay/CradleOfLife_Gameplay_TacticalCombat.gif",
+      "preview": "assets/gameplay/CradleOfLife_Gameplay_TacticalCombat.gif?v=motion1",
       "webm": "",
-      "mp4": "assets/gameplay/CradleOfLife_Gameplay_TacticalCombat.mp4",
-      "still": "assets/gameplay/CradleOfLife_Gameplay_TacticalCombat-still.jpg"
+      "mp4": "assets/gameplay/CradleOfLife_Gameplay_TacticalCombat.mp4?v=motion1",
+      "still": "assets/gameplay/CradleOfLife_Gameplay_TacticalCombat-still.jpg?v=motion1"
     },
     "exploration": {
-      "preview": "assets/gameplay/CradleOfLife_Gameplay_Exploration.gif",
+      "preview": "assets/gameplay/CradleOfLife_Gameplay_Exploration.gif?v=motion1",
       "webm": "",
-      "mp4": "assets/gameplay/CradleOfLife_Gameplay_Exploration.mp4",
-      "still": "assets/gameplay/CradleOfLife_Gameplay_Exploration-still.jpg"
+      "mp4": "assets/gameplay/CradleOfLife_Gameplay_Exploration.mp4?v=motion1",
+      "still": "assets/gameplay/CradleOfLife_Gameplay_Exploration-still.jpg?v=motion1"
     }
   }
 }

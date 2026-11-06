@@ -180,7 +180,8 @@ function Copy-ConfiguredAsset {
   )
 
   if ([string]::IsNullOrWhiteSpace($RelativePath)) { return }
-  $candidate = Join-Path $projectRoot $RelativePath
+  $fileRelativePath = ($RelativePath -split '[?#]', 2)[0]
+  $candidate = Join-Path $projectRoot $fileRelativePath
   if (-not (Test-Path -LiteralPath $candidate -PathType Leaf)) { return }
 
   $resolvedCandidate = (Resolve-Path -LiteralPath $candidate).Path
