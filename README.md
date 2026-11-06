@@ -47,15 +47,15 @@ Open `index.html` and search for:
 
 Update the word-count labels when the copy changes. Keep claims aligned with the current Steam page and current demo.
 
-## Configure the press email
+## Press email
 
-Open `press-kit-config.json` and set `PRESS_EMAIL` after the dedicated public address is active:
+The dedicated public press address is configured in `press-kit-config.json`:
 
 ```json
-"PRESS_EMAIL": ""
+"PRESS_EMAIL": "press.cradleoflife@outlook.com"
 ```
 
-Leave the value empty until the approved address is live, then place that address between the quotation marks. The website will display `Public press email pending` and will not create a mail link while the value is empty. Rebuild the ZIP after changing the value so its Contact file matches.
+Update this value if the public press address changes, then rebuild the ZIP so its Contact file matches.
 
 ## Pending optional assets
 
@@ -65,7 +65,6 @@ Optional files are controlled through `press-kit-config.json`. A section or down
 - Four gameplay captures
 - High-resolution transparent logo
 - Print-quality key-art master
-- Final public press email
 
 ## Replace the developer headshot
 
