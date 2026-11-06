@@ -1346,16 +1346,10 @@ a:hover { color: #efda98; }
 .pantheon-grid { gap: 0.45rem; padding: 0.45rem; border-color: rgba(185, 163, 99, 0.28); }
 .pantheon-grid figure { border: 0; }
 .pantheon-grid figure::before {
-  content: "";
-  position: absolute;
-  inset: -3px -3px auto;
-  z-index: 2;
-  aspect-ratio: 1 / 1;
-  pointer-events: none;
-  background: url("../assets/cradle-interface/portrait-frame.png") center / 100% 100% no-repeat;
+  content: none;
 }
 .pantheon-grid figure::after { display: none; }
-.pantheon-grid img { height: auto; padding: 12px; }
+.pantheon-grid img { height: auto; padding: 0; }
 .pantheon-grid figcaption { margin: 0 8px 8px; border-top-color: rgba(185, 163, 99, 0.28); }
 
 .headshot-frame { padding: 18px 18px 28px; }
@@ -1399,7 +1393,7 @@ a:hover { color: #efda98; }
   }
   .gallery-item figcaption { padding-inline: 0.6rem; }
   .pantheon-grid { gap: 0.25rem; padding: 0.25rem; }
-  .pantheon-grid img { padding: 7px; }
+  .pantheon-grid img { padding: 0; }
   .headshot-frame { padding: 13px 13px 22px; }
 }
 
