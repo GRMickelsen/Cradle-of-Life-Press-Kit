@@ -1,6 +1,6 @@
 # Asset Sources
 
-Selected on September 9, 2026. Original game files were copied without modifying the game repository.
+Selected on September 9, 2026, with gameplay captures added November 6, 2026. Original game files were copied without modifying the game repository.
 
 ## Current repository main
 
@@ -20,5 +20,9 @@ Store page: `https://store.steampowered.com/app/4580240/The_Cradle_of_Life/`
 - `assets/key-art/steam-page-background.jpg` from the current Steam page background
 - `assets/screenshots/*.jpg` from selected current full-resolution Steam screenshots
 - `assets/trailer/teaser-trailer-poster.jpg` from the current Steam teaser trailer poster
+- `assets/gameplay/CradleOfLife_Gameplay_TacticalCombat.*` from the approved Steam media source `english_battle.GIF`
+- `assets/gameplay/CradleOfLife_Gameplay_Exploration.*` from the approved Steam media source `english_exploration.GIF`
+
+The gameplay GIFs are web-optimized derivatives. Matching MP4 and still-image files are included for reuse and accessibility.
 
 The website does not include AI-generated replacement art or screenshots of unpublished material.

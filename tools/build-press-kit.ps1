@@ -36,7 +36,7 @@ Release status: Coming soon
 Platforms: Windows and macOS
 Press contact: $pressEmail
 
-This archive was assembled from current public Steam materials and repository main on September 9, 2026.
+This archive was assembled from current public Steam materials and repository main on November 6, 2026.
 Please preserve screenshot aspect ratios and do not imply that unannounced content is included in the current demo.
 "@
 
@@ -59,21 +59,25 @@ Press contact: $pressEmail
 
 ONE-SENTENCE DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG where Caelis searches for the Needle, fights on tactical grids, enters reality-warping Shimmers, and draws the attention of six competing gods.
+The Cradle of Life is a dark-fantasy tactical RPG where Caelis's search for answers becomes a hunt for the Needle, drawing him through reality-warping Shimmers and into the attention of six competing gods.
 
 SHORT DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior sent to find a forgotten relic called the Needle. Combat takes place on a grid and uses Action Points, positioning, height, weapon reach, Poise, wounds, Hunger, and Psych. Outside combat, players explore Thornvale without a trail of objective markers, speak with its people, and search for clues in the environment. Shimmers distort familiar places, and six gods begin paying attention to what Caelis does. The Steam demo covers the opening journey through Thornvale.
+The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a weathered warrior whose search for answers becomes a hunt for the Needle. Combat unfolds on a grid shaped by Action Points, positioning, height, weapon reach, Poise, wounds, Hunger, and Psych. Beyond battle, players explore Thornvale without objective trails, question its people, and read the environment for clues. Reality-warping Shimmers threaten familiar places, while six gods offer competing visions of suffering, survival, and humanity's future. The Steam demo covers the opening journey through Thornvale.
 
 LONG DESCRIPTION
 
 Shimmers are appearing without warning. They change familiar places, and sometimes whole villages disappear. The gods have been silent for centuries, but that silence is ending.
 
-Caelis is sent to find the Needle, a relic people remember differently depending on whom he asks. His search begins in Thornvale, where the roads, ruins, homes, and surrounding wilderness hold as much information as the people living there. The game does not mark every answer. Players are expected to ask questions, read, and look around.
+After a Shimmer takes his wife, Caelis's search to understand what happened becomes a hunt for the Needle—a forgotten relic, a possible answer, and a key to forces larger than any kingdom. The search begins in Thornvale, where roads, ruins, homes, and wilderness hold as much information as the people living there. The game does not mark every answer. Players are expected to ask questions, read, and look around.
 
-Combat uses a tactical grid and Action Points. Movement, height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so arriving at a fight in poor condition can matter.
+Combat uses a tactical grid and Action Points. Movement, height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so arriving at a fight in poor condition matters.
 
-Players can customize Caelis's appearance, which is reflected in both his world sprite and portrait. Weapon familiarity, Resolve, and decisions develop over the course of play. The current Steam demo contains the opening section in Thornvale and introduces the Shimmers and the six gods without revealing their larger role.
+Players customize Caelis's appearance across his world sprite and portrait. Weapon familiarity, Resolve, and decisions develop over the course of play. Six gods watch those decisions, each offering a different answer to suffering, survival, truth, and humanity's future. Their attention turns every conversation and decision into part of a larger argument about what the world should become.
+
+The world is dying. What should come next?
+
+The Steam demo contains the opening section in Thornvale and introduces the Shimmers and six gods without revealing their larger role.
 
 CONTENT WARNINGS
 
@@ -88,16 +92,10 @@ Approved captures will use this folder when supplied:
 Tactical Combat
 A tactical encounter showing movement, Action Points, terrain, height, status effects, and enemy behavior.
 
-Shimmer Distortion
-A glimpse of the Shimmer and its visual distortion effects.
-
-Character Customization
-A look at Caelis's character creation options.
-
 Exploration
 Exploring the roads, ruins, and wilderness around Thornvale.
 
-GIF previews and WebM, MP4, or still-image downloads may be included. No temporary footage has been manufactured.
+Optimized GIF previews, MP4 files, and still-image downloads are included. The captures originate from approved Steam media.
 "@
 
 $developerBiography = @"
@@ -197,6 +195,7 @@ Copy-ConfiguredAsset -RelativePath $config.DEVELOPER_HEADSHOT.download -Destinat
 if ([string]::IsNullOrWhiteSpace($config.DEVELOPER_HEADSHOT.download)) {
   Copy-ConfiguredAsset -RelativePath $config.DEVELOPER_HEADSHOT.src -DestinationDirectory (Join-Path $kitRoot "Developer")
 }
+Copy-ConfiguredAsset -RelativePath "assets/developer/garrett-mickelsen-service-and-family.jpg" -DestinationDirectory (Join-Path $kitRoot "Developer")
 
 Copy-ConfiguredAsset -RelativePath $config.TRANSPARENT_LOGO.png -DestinationDirectory (Join-Path $kitRoot "Logos")
 Copy-ConfiguredAsset -RelativePath $config.TRANSPARENT_LOGO.svg -DestinationDirectory (Join-Path $kitRoot "Logos")

@@ -1,16 +1,14 @@
 # Gameplay Captures
 
-This folder is ready for the four approved gameplay captures. Each item can provide a GIF or still preview plus WebM and MP4 downloads.
+This folder contains two approved gameplay captures selected from the media prepared for the Steam page. Each capture provides an optimized looping GIF, an MP4 download, and a still image.
 
 Recommended filenames:
 
 - `CradleOfLife_Gameplay_TacticalCombat.gif`
-- `CradleOfLife_Gameplay_TacticalCombat.webm`
-- `CradleOfLife_Gameplay_Shimmer.gif`
-- `CradleOfLife_Gameplay_Shimmer.webm`
-- `CradleOfLife_Gameplay_Customization.gif`
-- `CradleOfLife_Gameplay_Customization.webm`
+- `CradleOfLife_Gameplay_TacticalCombat.mp4`
+- `CradleOfLife_Gameplay_TacticalCombat-still.jpg`
 - `CradleOfLife_Gameplay_Exploration.gif`
-- `CradleOfLife_Gameplay_Exploration.webm`
+- `CradleOfLife_Gameplay_Exploration.mp4`
+- `CradleOfLife_Gameplay_Exploration-still.jpg`
 
-Configure the matching paths in `press-kit-config.json`. Until then, no media card or broken download is displayed.
+The matching paths are configured in `press-kit-config.json`. The original high-weight GIFs remain in the local Steam media source folder; the web versions are resized and palette-optimized to protect load time.
