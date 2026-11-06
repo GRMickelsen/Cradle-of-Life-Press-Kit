@@ -17,6 +17,7 @@ $folders = @(
   (Join-Path $kitRoot "Key_Art\Pantheon"),
   (Join-Path $kitRoot "Screenshots"),
   (Join-Path $kitRoot "Gameplay_Captures"),
+  (Join-Path $kitRoot "Trailer"),
   (Join-Path $kitRoot "Creator_Guidelines"),
   (Join-Path $kitRoot "Developer"),
   (Join-Path $kitRoot "Contact")
@@ -31,6 +32,9 @@ The Cradle of Life is a dark-fantasy tactical RPG developed by Garrett Mickelsen
 
 Steam and demo:
 https://store.steampowered.com/app/4580240/The_Cradle_of_Life/
+
+Official demo trailer:
+https://youtu.be/dXcrJQChVNU
 
 Release status: Coming soon
 Platforms: Windows and macOS
@@ -95,7 +99,13 @@ A tactical encounter showing movement, Action Points, terrain, height, status ef
 Exploration
 Exploring the roads, ruins, and wilderness around Thornvale.
 
-Optimized GIF previews, MP4 files, and still-image downloads are included. The captures originate from approved Steam media.
+Character Creation
+Customize Caelis with a world sprite and portrait that reflect the same appearance choices.
+
+Shimmer Combat
+A hostile Shimmer encounter where positioning and enemy pressure can quickly narrow the safe choices.
+
+Optimized GIF previews where available, MP4 files, and still-image downloads are included. The captures originate from approved game and Steam media.
 "@
 
 $developerBiography = @"
@@ -155,6 +165,24 @@ Steam and demo:
 https://store.steampowered.com/app/4580240/The_Cradle_of_Life/
 "@
 
+$socialLinks = @"
+THE CRADLE OF LIFE - OFFICIAL LINKS
+
+Steam: https://store.steampowered.com/app/4580240/The_Cradle_of_Life/
+YouTube: https://www.youtube.com/@cradleoflife_dev
+Official demo trailer: https://youtu.be/dXcrJQChVNU
+X / Global: https://x.com/grmmilo
+X / Japanese: https://x.com/cradleoflife_jp
+Instagram: https://www.instagram.com/cradleoflife_dev/
+TikTok: https://www.tiktok.com/@cradleoflife_dev
+Facebook: https://www.facebook.com/1318164371390816
+Bluesky: https://bsky.app/profile/cradleoflifedev.bsky.social
+Threads: https://www.threads.com/@mickelsengarrett
+Reddit: https://www.reddit.com/user/Strong-Detail-2631/
+Bilibili: https://space.bilibili.com/en/3747575731587915
+Steam Community: https://steamcommunity.com/app/4580240
+"@
+
 Set-Content -LiteralPath (Join-Path $kitRoot "README.txt") -Value $readme -Encoding utf8
 Set-Content -LiteralPath (Join-Path $kitRoot "Fact_Sheet\Fact_Sheet.txt") -Value $factSheet -Encoding utf8
 Set-Content -LiteralPath (Join-Path $kitRoot "Gameplay_Captures\README.txt") -Value $captureReadme -Encoding utf8
@@ -162,12 +190,15 @@ Set-Content -LiteralPath (Join-Path $kitRoot "Developer\Garrett_Mickelsen_Biogra
 Set-Content -LiteralPath (Join-Path $kitRoot "Creator_Guidelines\Creator_and_Press_Guidelines.txt") -Value $creatorGuidelines -Encoding utf8
 Set-Content -LiteralPath (Join-Path $kitRoot "Fact_Sheet\Pronunciation_Guide.txt") -Value $pronunciationGuide -Encoding utf8
 Set-Content -LiteralPath (Join-Path $kitRoot "Contact\Press_Contact.txt") -Value $contactReadme -Encoding utf8
+Set-Content -LiteralPath (Join-Path $kitRoot "Contact\Official_Links.txt") -Value $socialLinks -Encoding utf8
 
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\logo\steam-header.jpg") -Destination (Join-Path $kitRoot "Logos\The_Cradle_of_Life_Steam_Header.jpg")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\cradle-key-art.png") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Key_Art.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\steam-capsule.jpg") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Steam_Capsule.jpg")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\steam-page-background.jpg") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Steam_Background.jpg")
-Copy-Item -LiteralPath (Join-Path $projectRoot "assets\trailer\teaser-trailer-poster.jpg") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Teaser_Poster.jpg")
+Copy-Item -LiteralPath (Join-Path $projectRoot "assets\trailer\official-trailer-poster.png") -Destination (Join-Path $kitRoot "Trailer\The_Cradle_of_Life_Official_Trailer_Poster.png")
+Copy-Item -LiteralPath (Join-Path $projectRoot "assets\trailer\CradleOfLife_Official_Demo_Trailer_1080p.mp4") -Destination (Join-Path $kitRoot "Trailer\The_Cradle_of_Life_Official_Demo_Trailer_1080p.mp4")
+Get-ChildItem -LiteralPath (Join-Path $projectRoot "output\pdf") -Filter "*.pdf" -File | Copy-Item -Destination (Join-Path $kitRoot "Fact_Sheet")
 $pantheonFiles = Get-ChildItem -LiteralPath (Join-Path $projectRoot "assets\pantheon") -File
 Copy-Item -LiteralPath $pantheonFiles.FullName -Destination (Join-Path $kitRoot "Key_Art\Pantheon")
 $screenshotFiles = Get-ChildItem -LiteralPath (Join-Path $projectRoot "assets\screenshots") -File
@@ -204,7 +235,7 @@ Copy-ConfiguredAsset -RelativePath $config.KEY_ART_MASTER.src -DestinationDirect
 
 foreach ($captureProperty in $config.GAMEPLAY_CAPTURES.PSObject.Properties) {
   $capture = $captureProperty.Value
-  foreach ($assetProperty in @("preview", "webm", "mp4", "still")) {
+  foreach ($assetProperty in @("preview", "gif", "webm", "mp4", "still")) {
     Copy-ConfiguredAsset -RelativePath $capture.$assetProperty -DestinationDirectory (Join-Path $kitRoot "Gameplay_Captures")
   }
 }

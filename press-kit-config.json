@@ -6,9 +6,9 @@
     "alt": "Portrait of Garrett Mickelsen"
   },
   "TRANSPARENT_LOGO": {
-    "png": "",
+    "png": "assets/logo/CradleOfLife_Logo_Transparent.png",
     "svg": "",
-    "resolution": ""
+    "resolution": "1280 x 720"
   },
   "KEY_ART_MASTER": {
     "src": "",
@@ -28,6 +28,20 @@
       "webm": "",
       "mp4": "assets/gameplay/CradleOfLife_Gameplay_Exploration.mp4?v=motion2",
       "still": "assets/gameplay/CradleOfLife_Gameplay_Exploration-still.jpg?v=motion1"
+    },
+    "character-creation": {
+      "preview": "assets/gameplay/CradleOfLife_Gameplay_CharacterCreation.mp4?v=motion1",
+      "gif": "",
+      "webm": "",
+      "mp4": "assets/gameplay/CradleOfLife_Gameplay_CharacterCreation.mp4?v=motion1",
+      "still": "assets/gameplay/CradleOfLife_Gameplay_CharacterCreation-still.jpg?v=motion1"
+    },
+    "shimmer-combat": {
+      "preview": "assets/gameplay/CradleOfLife_Gameplay_ShimmerCombat.mp4?v=motion1",
+      "gif": "",
+      "webm": "",
+      "mp4": "assets/gameplay/CradleOfLife_Gameplay_ShimmerCombat.mp4?v=motion1",
+      "still": "assets/gameplay/CradleOfLife_Gameplay_ShimmerCombat-still.jpg?v=motion1"
     }
   }
 }

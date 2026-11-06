@@ -316,6 +316,46 @@ h2 { margin: 0; color: #f0e4cf; font-size: 4.25rem; line-height: 1; }
 }
 .copy-button:hover { border-color: var(--amber-bright); background: rgba(208, 163, 76, 0.08); }
 
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.difference-card {
+  position: relative;
+  min-height: 310px;
+  padding: 4.5rem 1.6rem 1.7rem;
+  overflow: hidden;
+  border: 1px solid rgba(185, 163, 99, 0.32);
+  background: linear-gradient(155deg, rgba(122, 33, 31, 0.18), rgba(8, 9, 10, 0.78) 44%);
+}
+
+.difference-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -52% 28%;
+  height: 70%;
+  background: radial-gradient(ellipse, rgba(122, 33, 31, 0.22), transparent 70%);
+  pointer-events: none;
+}
+
+.difference-number {
+  position: absolute;
+  top: 1.35rem;
+  left: 1.55rem;
+  color: var(--blood-bright);
+  font-family: "Cradle Display", Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+}
+
+.difference-card h3 { position: relative; margin: 0; color: var(--paper); font-size: clamp(1.45rem, 2vw, 1.9rem); line-height: 1.1; }
+.difference-card p { position: relative; margin: 1rem 0 0; color: var(--paper-muted); }
+.systems-heading { margin-bottom: 1.25rem; }
+.systems-heading h3 { margin: 0.35rem 0 0; color: var(--paper); font-size: 1.8rem; }
+
 .feature-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -417,6 +457,25 @@ h2 { margin: 0; color: #f0e4cf; font-size: 4.25rem; line-height: 1; }
   font-size: 1.3rem;
   transform: translate(-50%, -50%);
 }
+
+.trailer-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #050505;
+  box-shadow: 0 22px 64px rgba(0, 0, 0, 0.42);
+}
+
+.fact-sheet-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.9rem;
+  margin-top: 1.4rem;
+  max-width: 530px;
+}
+.fact-sheet-links span { flex-basis: 100%; color: var(--paper); font-weight: 700; }
+.fact-sheet-links a { font-size: 0.83rem; font-weight: 750; text-transform: uppercase; }
 
 .world-intro {
   display: grid;
@@ -608,6 +667,8 @@ h2 { margin: 0; color: #f0e4cf; font-size: 4.25rem; line-height: 1; }
   .hero-facts div { padding: 0.45rem 1rem; border-bottom: 1px solid rgba(218, 176, 91, 0.15); }
   .hero-facts div:nth-child(odd) { border-left: 0; }
   .fact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .difference-grid { grid-template-columns: 1fr; }
+  .difference-card { min-height: 0; }
   .copy-block { grid-template-columns: 190px 1fr; }
   .copy-button { grid-column: 2; justify-self: start; }
   .capture-grid { grid-template-columns: 1fr; }

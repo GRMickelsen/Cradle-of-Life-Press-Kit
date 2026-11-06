@@ -22,7 +22,8 @@ Then visit `http://127.0.0.1:8765/` on the same computer. This local address wil
 - `css/style.css` contains the full visual design and responsive rules.
 - `js/main.js` controls mobile navigation, copy buttons, and the screenshot viewer.
 - `press-kit-config.json` controls the public email and optional media that should appear only after approved files exist.
-- `assets/` contains the web-facing artwork, screenshots, pantheon portraits, font, and trailer poster.
+- `assets/` contains web-facing artwork, the red transparent logo, screenshots, pantheon portraits, gameplay captures, and the official trailer.
+- `output/pdf/` contains localized one-page press fact sheets.
 - `downloads/The_Cradle_of_Life_Press_Kit.zip` is the public downloadable archive.
 - `tools/build-press-kit.ps1` rebuilds the downloadable archive from current site assets.
 - `assets/SOURCES.md` records where each selected asset came from.
@@ -57,13 +58,10 @@ The dedicated public press address is configured in `press-kit-config.json`:
 
 Update this value if the public press address changes, then rebuild the ZIP so its Contact file matches.
 
-## Pending optional assets
+## Pending optional asset
 
 Optional files are controlled through `press-kit-config.json`. A section or download stays hidden unless its configured file exists.
 
-- Developer headshot
-- Four gameplay captures
-- High-resolution transparent logo
 - Print-quality key-art master
 
 ## Replace the developer headshot
@@ -77,7 +75,7 @@ If the file is missing or the configuration value is empty, the site uses a clea
 
 ## Add gameplay captures
 
-Put approved files in `assets/gameplay/` using these recommended names:
+The configured set currently includes tactical combat, exploration, character creation, and Shimmer combat. Put replacements in `assets/gameplay/` using the same descriptive naming pattern.
 
 - `CradleOfLife_Gameplay_TacticalCombat.gif`
 - `CradleOfLife_Gameplay_TacticalCombat.webm`
@@ -88,11 +86,11 @@ Put approved files in `assets/gameplay/` using these recommended names:
 - `CradleOfLife_Gameplay_Exploration.gif`
 - `CradleOfLife_Gameplay_Exploration.webm`
 
-Each capture supports `preview`, `webm`, `mp4`, and `still` paths in `press-kit-config.json`. Cards remain hidden until at least one configured file exists. Prefer a lightweight still or optimized GIF for `preview`; full WebM and MP4 files can remain direct downloads.
+Each capture supports `preview`, `gif`, `webm`, `mp4`, and `still` paths in `press-kit-config.json`. Cards remain hidden until at least one configured file exists. MP4 is preferred for smooth playback; captures play only while visible and respect reduced-motion preferences.
 
 ## Add the transparent logo
 
-Place the approved file at `assets/logo/CradleOfLife_Logo_Transparent.png`. An optional SVG can be added beside it. Configure `TRANSPARENT_LOGO.png`, `TRANSPARENT_LOGO.svg`, and the source `resolution` in `press-kit-config.json`.
+The approved red logo is stored at `assets/logo/CradleOfLife_Logo_Transparent.png` and configured in `press-kit-config.json`. An optional matching red SVG can be added later.
 
 Do not upscale the existing Steam header or capsule.
 
@@ -123,11 +121,11 @@ The script creates `downloads/The_Cradle_of_Life_Press_Kit.zip` from the current
 
 No GitHub Actions workflow is required. The included `.nojekyll` file keeps GitHub Pages from applying Jekyll processing.
 
-After a final public URL exists, test the link preview on the intended social platforms. The Open Graph and Twitter image paths currently use a repository-relative path because no production domain has been assigned.
+The canonical, Open Graph, and Twitter metadata use the public GitHub Pages URL. Re-test link previews after changing the domain or social image.
 
 ## Source authority
 
-The first pass was verified on September 9, 2026 against:
+The current press materials were reviewed on November 6, 2026 against:
 
 - Live Steam app `4580240`
 - Steam demo app `4655560`

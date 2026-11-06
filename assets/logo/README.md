@@ -1,9 +1,7 @@
 # Logo Assets
 
-The current Steam header remains available as web artwork. It is not presented as a high-resolution transparent master.
-
-Add the pending transparent logo as:
+The approved red transparent logo is available as:
 
 `CradleOfLife_Logo_Transparent.png`
 
-An optional `CradleOfLife_Logo_Transparent.svg` can be added later. Configure the paths in `press-kit-config.json` to reveal the download actions.
+The current Steam header remains available as web artwork. Do not substitute or publish the earlier gold logo. An optional matching red SVG can be added later.

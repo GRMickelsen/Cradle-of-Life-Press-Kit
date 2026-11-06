@@ -90,6 +90,20 @@
     }
   };
 
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const playbackObserver = "IntersectionObserver" in window
+    ? new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (entry.isIntersecting && !reducedMotion.matches) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: 0.3 })
+    : null;
+
   const configurePressEmail = (email) => {
     const normalizedEmail = typeof email === "string" ? email.trim() : "";
     if (!normalizedEmail) return;
@@ -149,7 +163,7 @@
       }
     ];
 
-    let visibleAssets = 0;
+    let keyArtMasterAvailable = false;
     for (const asset of assetDefinitions) {
       if (!(await resourceExists(asset.path))) continue;
       const link = document.querySelector(asset.selector);
@@ -158,10 +172,10 @@
       link.href = asset.path;
       link.textContent = asset.resolution ? `${asset.label} (${asset.resolution})` : asset.label;
       link.hidden = false;
-      visibleAssets += 1;
+      if (asset.selector === "[data-key-art-master]") keyArtMasterAvailable = true;
     }
 
-    if (visibleAssets > 0) {
+    if (keyArtMasterAvailable) {
       const pending = document.querySelector("[data-master-assets-pending]");
       if (pending) pending.hidden = true;
     }
@@ -202,7 +216,7 @@
         image.hidden = false;
       } else if (video) {
         if (available.still) video.poster = available.still;
-        video.autoplay = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        video.autoplay = false;
         video.muted = true;
         video.loop = true;
         const videoPaths = [available.webm, available.mp4, available.preview].filter(Boolean);
@@ -217,7 +231,7 @@
         if (video.querySelector("source")) {
           video.hidden = false;
           video.load();
-          if (video.autoplay) video.play().catch(() => {});
+          if (playbackObserver) playbackObserver.observe(video);
         }
       }
 
