@@ -2001,6 +2001,23 @@ a:hover { color: #efda98; }
     linear-gradient(90deg, rgba(5, 5, 4, 0.34), transparent 48%);
 }
 
+.first-impression[data-story-stage="1"] .story-shade,
+.first-impression[data-story-stage="2"] .story-shade,
+.first-impression[data-story-stage="3"] .story-shade {
+  background:
+    linear-gradient(90deg, rgba(5, 5, 4, 0.78) 0%, rgba(5, 5, 4, 0.48) 29%, rgba(5, 5, 4, 0.12) 58%, transparent 100%),
+    linear-gradient(0deg, rgba(5, 5, 4, 0.68) 0%, transparent 39%);
+}
+
+.first-impression[data-story-stage="1"] .story-video,
+.first-impression[data-story-stage="2"] .story-video {
+  filter: saturate(1.05) contrast(1.01) brightness(1.34);
+}
+
+.first-impression[data-story-stage="3"] .story-gods-art {
+  filter: saturate(1.03) contrast(1.01) brightness(1.22);
+}
+
 .story-panel-title {
   top: auto;
   bottom: 6.5rem;
@@ -2073,7 +2090,7 @@ a:hover { color: #efda98; }
 
   .story-opening-art {
     background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
-    background-position: 24% -42px;
+    background-position: 52% 18px;
     background-size: auto 62%;
   }
 
@@ -2086,6 +2103,12 @@ a:hover { color: #efda98; }
     background: linear-gradient(0deg, rgba(5, 5, 4, 0.99) 0%, rgba(5, 5, 4, 0.88) 27%, rgba(5, 5, 4, 0.13) 55%, transparent 76%);
   }
 
+  .first-impression[data-story-stage="1"] .story-shade,
+  .first-impression[data-story-stage="2"] .story-shade,
+  .first-impression[data-story-stage="3"] .story-shade {
+    background: linear-gradient(0deg, rgba(5, 5, 4, 0.9) 0%, rgba(5, 5, 4, 0.61) 31%, rgba(5, 5, 4, 0.12) 61%, transparent 82%);
+  }
+
   .story-panel-title { bottom: 5rem; }
   .hero-logo {
     position: absolute;
@@ -2095,10 +2118,25 @@ a:hover { color: #efda98; }
     width: 100%;
     aspect-ratio: 1232 / 706;
     margin: 0;
-    background-image: url("../assets/logo/CradleOfLife_MainLogo_1232x706.png");
-    background-position: center;
-    background-size: 100% auto;
+    background: none;
     transform: none;
+  }
+
+  .hero-logo::before,
+  .hero-logo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../assets/logo/CradleOfLife_MainLogo_1232x706.png") center / 100% auto no-repeat;
+  }
+
+  .hero-logo::before {
+    clip-path: inset(0 42% 55% 0);
+  }
+
+  .hero-logo::after {
+    clip-path: inset(50% 0 0 28%);
+    transform: translate(30px, 60px);
   }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
 }
