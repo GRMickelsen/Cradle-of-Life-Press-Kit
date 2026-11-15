@@ -2136,7 +2136,7 @@ a:hover { color: #efda98; }
 
   .hero-logo::after {
     clip-path: inset(50% 0 0 28%);
-    transform: translate(30px, -30px);
+    transform: translate(17px, 9px);
   }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
 }
