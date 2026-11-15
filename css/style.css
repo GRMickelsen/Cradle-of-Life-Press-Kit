@@ -1979,10 +1979,10 @@ a:hover { color: #efda98; }
 
 .story-opening-art {
   background-color: #070706;
-  background-image: url("../assets/key-art/CradleOfLife_MainCapsule_1232x706.png");
-  background-position: center calc(50% + 34px);
+  background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
+  background-position: center 68px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto calc(100% - 68px);
   filter: saturate(0.94) contrast(1.04);
 }
 
@@ -2008,6 +2008,13 @@ a:hover { color: #efda98; }
 }
 
 .story-panel-title.is-active { transform: none; }
+
+.hero-logo {
+  width: min(520px, 80vw);
+  aspect-ratio: 1.5;
+  margin: -0.5rem 0 -1.2rem;
+  background: url("../assets/logo/CradleOfLife_ShortcutLogo_512x512.png") center 48% / 100% auto no-repeat;
+}
 
 .story-panel-title .hero-hook {
   max-width: 600px;
@@ -2064,9 +2071,9 @@ a:hover { color: #efda98; }
   .wordmark img { width: 60px; height: 60px; }
 
   .story-opening-art {
-    background-image: url("../assets/key-art/CradleOfLife_VerticalCapsule_748x896.png");
-    background-position: center 68px;
-    background-size: 100% auto;
+    background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
+    background-position: 64% 68px;
+    background-size: auto 62%;
   }
 
   .story-gods-art {
@@ -2079,6 +2086,7 @@ a:hover { color: #efda98; }
   }
 
   .story-panel-title { bottom: 5rem; }
+  .hero-logo { width: min(360px, 88vw); margin-bottom: -1rem; }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
 }
 

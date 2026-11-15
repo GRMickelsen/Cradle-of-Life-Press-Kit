@@ -40,7 +40,7 @@ The gallery shows six featured screenshots first and reveals the full set throug
 
 ## Update the opening sequence
 
-The four opening chapters are in `index.html` under `first-impression`. They currently use the main Steam capsule, tactical-combat capture, Shimmer-combat capture, and the Gods and Cradle artwork. Mobile uses the vertical Steam capsule. The layout and mobile framing are in the final sections of `css/style.css`; chapter switching is handled in `js/main.js`.
+The four opening chapters are in `index.html` under `first-impression`. The first chapter places the supplied metallic logo over the logo-free 3840 × 1240 library artwork. The remaining chapters use the tactical-combat capture, Shimmer-combat capture, and the Gods and Cradle artwork. The layout and mobile framing are in the final sections of `css/style.css`; chapter switching is handled in `js/main.js`.
 
 Keep the opening to a small number of short, specific ideas. If a video path changes, update both its `<source>` and poster image in `index.html`.
 
@@ -77,9 +77,9 @@ Optional files are controlled through `press-kit-config.json`. A section or down
 
 If the file is missing or the configuration value is empty, the site uses a clean monogram placeholder and does not request a broken image.
 
-## Add gameplay captures
+## Gameplay capture files
 
-The configured set currently includes tactical combat, exploration, character creation, and Shimmer combat. Put replacements in `assets/gameplay/` using the same descriptive naming pattern.
+The website no longer has a separate gameplay-captures section. Approved capture files remain available in the downloadable press-kit ZIP. Put replacements in `assets/gameplay/` using the same descriptive naming pattern.
 
 - `CradleOfLife_Gameplay_TacticalCombat.gif`
 - `CradleOfLife_Gameplay_TacticalCombat.webm`
@@ -90,7 +90,7 @@ The configured set currently includes tactical combat, exploration, character cr
 - `CradleOfLife_Gameplay_Exploration.gif`
 - `CradleOfLife_Gameplay_Exploration.webm`
 
-Each capture supports `preview`, `gif`, `webm`, `mp4`, and `still` paths in `press-kit-config.json`. Cards remain hidden until at least one configured file exists. MP4 is preferred for smooth playback; captures play only while visible and respect reduced-motion preferences.
+Each capture supports `preview`, `gif`, `webm`, `mp4`, and `still` paths in `press-kit-config.json`. The build script uses these paths when assembling the ZIP.
 
 ## Add the transparent logo
 
