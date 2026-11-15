@@ -1759,25 +1759,11 @@ a:hover { color: #efda98; }
   font-size: clamp(1.02rem, 1.4vw, 1.22rem);
 }
 
-.story-skip,
 .story-scroll-cue,
 .story-progress {
   position: absolute;
   z-index: 5;
 }
-
-.story-skip {
-  top: 88px;
-  right: 3vw;
-  color: #c4bba9;
-  font-size: 0.75rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.story-skip:hover { color: var(--amber-bright); }
 
 .story-scroll-cue {
   left: 50%;
@@ -1931,7 +1917,6 @@ a:hover { color: #efda98; }
   .story-panel-title .hero-hook { margin-top: 0.4rem; font-size: 1.04rem; }
   .story-panel-title .hero-actions { gap: 0.45rem; margin-top: 1rem; }
   .story-panel-title .hero-actions .button { min-height: 45px; padding: 0.65rem 0.85rem; font-size: 0.68rem; }
-  .story-skip { top: 80px; right: 4vw; }
   .story-progress { right: auto; bottom: 1rem; left: 4vw; }
   .story-scroll-cue { right: 4vw; bottom: 1.35rem; left: auto; transform: none; }
   .story-step { min-height: 75svh; }
