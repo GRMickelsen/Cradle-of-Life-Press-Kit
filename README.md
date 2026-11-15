@@ -20,7 +20,7 @@ Then visit `http://127.0.0.1:8765/` on the same computer. This local address wil
 
 - `index.html` contains all visible press-kit content and metadata.
 - `css/style.css` contains the full visual design and responsive rules.
-- `js/main.js` controls mobile navigation, copy buttons, and the screenshot viewer.
+- `js/main.js` controls the scroll-led opening, mobile navigation, copy buttons, gallery expansion, and screenshot viewer.
 - `press-kit-config.json` controls the public email and optional media that should appear only after approved files exist.
 - `assets/` contains web-facing artwork, the red transparent logo, screenshots, pantheon portraits, gameplay captures, and the official trailer.
 - `output/pdf/` contains localized one-page press fact sheets.
@@ -36,7 +36,13 @@ Then visit `http://127.0.0.1:8765/` on the same computer. This local address wil
 4. Keep screenshots truthful to currently playable or publicly announced content.
 5. Run the archive rebuild script described below.
 
-The gallery loads images lazily after the first screenshot. Full-resolution images are used for both viewing and individual downloads.
+The gallery shows six featured screenshots first and reveals the full set through the **View all 12 screenshots** button. It loads images lazily after the first screenshot. Full-resolution images are used for both viewing and individual downloads.
+
+## Update the opening sequence
+
+The four opening chapters are in `index.html` under `first-impression`. They currently use the key art, tactical-combat capture, Shimmer-combat capture, and pantheon portraits. The layout and mobile framing are in the final `Scroll-led first impression` section of `css/style.css`; chapter switching is handled in `js/main.js`.
+
+Keep the opening to a small number of short, specific ideas. If a video path changes, update both its `<source>` and poster image in `index.html`.
 
 ## Update game descriptions
 

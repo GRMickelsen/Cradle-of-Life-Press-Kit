@@ -38,36 +38,83 @@
     <nav id="site-nav" class="site-nav" aria-label="Press kit navigation" data-nav>
       <a href="#facts">Facts</a>
       <a href="#screenshots">Media</a>
-      <a href="#creator-info">Guidelines</a>
       <a href="#developer">Developer</a>
+      <a href="#creator-info">Guidelines</a>
       <a href="#contact">Contact</a>
       <a class="nav-download" href="downloads/The_Cradle_of_Life_Press_Kit.zip" download>Download all</a>
     </nav>
   </header>
 
   <main id="main-content">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-backdrop" aria-hidden="true"></div>
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-rift" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="eyebrow">Official press kit <span aria-hidden="true">/ Archive I</span></p>
-        <h1 id="hero-title"><span>The Cradle</span><br><span>of Life</span></h1>
-        <p class="hero-genre">Dark Fantasy Tactical RPG</p>
-        <p class="hero-hook">The world is dying. Six gods disagree on what should replace it.</p>
-        <div class="hero-actions" aria-label="Primary links">
-          <a class="button button-primary" href="https://store.steampowered.com/app/4580240/The_Cradle_of_Life/" target="_blank" rel="noopener"><span>Play the demo</span></a>
-          <a class="button button-secondary" href="https://store.steampowered.com/app/4580240/The_Cradle_of_Life/" target="_blank" rel="noopener"><span>View on Steam</span></a>
-          <a class="button button-ghost" href="downloads/The_Cradle_of_Life_Press_Kit.zip" download><span>Download press assets</span></a>
+    <section class="first-impression" id="top" aria-labelledby="hero-title" data-story>
+      <div class="story-sticky">
+        <div class="story-media" aria-hidden="true">
+          <div class="story-visual story-key-art is-active" data-story-visual="0"></div>
+          <video class="story-visual story-video" data-story-visual="1" muted loop playsinline preload="metadata" poster="assets/gameplay/CradleOfLife_Gameplay_TacticalCombat-still.jpg?v=motion1">
+            <source src="assets/gameplay/CradleOfLife_Gameplay_TacticalCombat.mp4?v=motion2" type="video/mp4">
+          </video>
+          <video class="story-visual story-video" data-story-visual="2" muted loop playsinline preload="metadata" poster="assets/gameplay/CradleOfLife_Gameplay_ShimmerCombat-still.jpg?v=motion1">
+            <source src="assets/gameplay/CradleOfLife_Gameplay_ShimmerCombat.mp4?v=motion1" type="video/mp4">
+          </video>
+          <div class="story-visual story-gods" data-story-visual="3">
+            <img src="assets/pantheon/airealen.png" alt="">
+            <img src="assets/pantheon/yrris.png" alt="">
+            <img src="assets/pantheon/valen.png" alt="">
+            <img src="assets/pantheon/thozur.png" alt="">
+            <img src="assets/pantheon/naerun.png" alt="">
+            <img src="assets/pantheon/zhal.png" alt="">
+          </div>
+          <div class="story-shade"></div>
+        </div>
+
+        <div class="story-copy">
+          <article class="story-panel story-panel-title is-active" data-story-panel="0">
+            <p class="eyebrow">Official press kit</p>
+            <h1 id="hero-title"><span>The Cradle</span><br><span>of Life</span></h1>
+            <p class="hero-genre">Dark Fantasy Tactical RPG</p>
+            <p class="hero-hook">The world is dying. Six gods disagree on what should replace it.</p>
+            <div class="hero-actions" aria-label="Primary links">
+              <a class="button button-primary" href="https://store.steampowered.com/app/4580240/The_Cradle_of_Life/" target="_blank" rel="noopener"><span>Play the demo</span></a>
+              <a class="button button-secondary" href="https://store.steampowered.com/app/4580240/The_Cradle_of_Life/" target="_blank" rel="noopener"><span>View on Steam</span></a>
+              <a class="button button-ghost" href="downloads/The_Cradle_of_Life_Press_Kit.zip" download><span>Download press assets</span></a>
+            </div>
+          </article>
+
+          <article class="story-panel" data-story-panel="1" aria-hidden="true">
+            <p class="eyebrow">Tactical combat</p>
+            <h2>Every move spends something.</h2>
+            <p>Movement and attacks use the same Action Point pool. Positioning, height, and weapon reach decide what Caelis can do next.</p>
+          </article>
+
+          <article class="story-panel" data-story-panel="2" aria-hidden="true">
+            <p class="eyebrow">The Shimmers</p>
+            <h2>Familiar places stop following familiar rules.</h2>
+            <p>Shimmers alter places Caelis already knows. Inside one, terrain and enemies can close off the safe choices quickly.</p>
+          </article>
+
+          <article class="story-panel" data-story-panel="3" aria-hidden="true">
+            <p class="eyebrow">The six gods</p>
+            <h2>They agree the world is dying. Nothing else.</h2>
+            <p>Each god wants a different future. What Caelis says and does changes which of them takes an interest.</p>
+          </article>
+        </div>
+
+        <a class="story-skip" href="#facts">Skip introduction</a>
+        <p class="story-scroll-cue" aria-hidden="true">Scroll to enter <span>&#8595;</span></p>
+        <div class="story-progress" aria-label="Introduction chapters">
+          <button class="is-active" type="button" data-story-jump="0" aria-label="Show title"><span>01</span></button>
+          <button type="button" data-story-jump="1" aria-label="Show tactical combat"><span>02</span></button>
+          <button type="button" data-story-jump="2" aria-label="Show the Shimmers"><span>03</span></button>
+          <button type="button" data-story-jump="3" aria-label="Show the six gods"><span>04</span></button>
         </div>
       </div>
-      <p class="hero-coordinate" aria-hidden="true">Thornvale / Shimmer Manifestation / Record I</p>
-      <dl class="hero-facts" aria-label="Game summary">
-        <div><dt>Developer</dt><dd>Garrett Mickelsen</dd></div>
-        <div><dt>Publisher</dt><dd>Milo's Games</dd></div>
-        <div><dt>Platforms</dt><dd>Windows / macOS</dd></div>
-        <div><dt>Status</dt><dd>Demo available / Coming soon</dd></div>
-      </dl>
+
+      <div class="story-steps" aria-hidden="true">
+        <span class="story-step" data-story-step="0"></span>
+        <span class="story-step" data-story-step="1"></span>
+        <span class="story-step" data-story-step="2"></span>
+        <span class="story-step" data-story-step="3"></span>
+      </div>
     </section>
 
     <section class="section facts-section" id="facts" aria-labelledby="facts-title">
@@ -98,103 +145,22 @@
       </nav>
     </section>
 
-    <section class="section about-section" id="about" aria-labelledby="about-title">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">Descriptions for coverage</p>
-          <h2 id="about-title">About the game</h2>
+    <section class="trailer-section" id="trailer" aria-labelledby="trailer-title">
+      <div class="trailer-inner">
+        <div class="trailer-copy">
+          <p class="eyebrow">Official video</p>
+          <h2 id="trailer-title">Official demo trailer</h2>
+          <p>Watch the full trailer here, on YouTube, or download the press-ready 1080p MP4.</p>
+          <div class="trailer-actions">
+            <a class="button button-primary" href="https://youtu.be/dXcrJQChVNU" target="_blank" rel="noopener">Watch on YouTube</a>
+            <a class="button button-secondary" href="assets/trailer/CradleOfLife_Official_Demo_Trailer_1080p.mp4" download>Download 1080p MP4 · 24 MB</a>
+            <a class="button button-secondary" href="https://store.steampowered.com/app/4580240/The_Cradle_of_Life/" target="_blank" rel="noopener">View on Steam</a>
+          </div>
         </div>
-        <p class="heading-note">These descriptions can be used as written or shortened for coverage.</p>
-      </div>
-      <div class="copy-stack">
-        <article class="copy-block">
-          <div class="copy-label"><h3>One-sentence description</h3><span>33 words</span></div>
-          <p data-copy-text>The Cradle of Life is a dark-fantasy tactical RPG where Caelis's search for answers becomes a hunt for the Needle, drawing him through reality-warping Shimmers and into the attention of six competing gods.</p>
-          <button class="copy-button" type="button" data-copy-button>Copy text</button>
-        </article>
-        <article class="copy-block">
-          <div class="copy-label"><h3>Short description</h3><span>85 words</span></div>
-          <p data-copy-text>The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a weathered warrior whose search for answers becomes a hunt for the Needle. Combat unfolds on a grid shaped by Action Points, positioning, height, weapon reach, Poise, wounds, Hunger, and Psych. Beyond battle, players explore Thornvale without objective trails, question its people, and read the environment for clues. Reality-warping Shimmers threaten familiar places, while six gods offer competing visions of suffering, survival, and humanity's future. The Steam demo covers the opening journey through Thornvale.</p>
-          <button class="copy-button" type="button" data-copy-button>Copy text</button>
-        </article>
-        <article class="copy-block copy-block-long">
-          <div class="copy-label"><h3>Long description</h3><span>217 words</span></div>
-          <p data-copy-text>Shimmers are appearing without warning. They change familiar places, and sometimes whole villages disappear. The gods have been silent for centuries, but that silence is ending.
-
-After a Shimmer takes his wife, Caelis's search to understand what happened becomes a hunt for the Needle—a forgotten relic, a possible answer, and a key to forces larger than any kingdom. The search begins in Thornvale, where roads, ruins, homes, and wilderness hold as much information as the people living there. The game does not mark every answer. Players are expected to ask questions, read, and look around.
-
-Combat uses a tactical grid and Action Points. Movement, height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so arriving at a fight in poor condition matters.
-
-Players customize Caelis's appearance across his world sprite and portrait. Weapon familiarity, Resolve, and decisions develop over the course of play. Six gods watch those decisions, each offering a different answer to suffering, survival, truth, and humanity's future. Their attention turns every conversation and decision into part of a larger argument about what the world should become.
-
-The world is dying. What should come next?
-
-The Steam demo contains the opening section in Thornvale and introduces the Shimmers and six gods without revealing their larger role.</p>
-          <button class="copy-button" type="button" data-copy-button>Copy text</button>
-        </article>
-      </div>
-    </section>
-
-    <section class="section features-section" id="features" aria-labelledby="features-title">
-      <div class="section-heading split-heading">
-        <div>
-          <p class="eyebrow">Why it stands apart</p>
-          <h2 id="features-title">What makes it different</h2>
-        </div>
-        <p class="heading-note">Combat asks players to commit. Decisions persist. Exploration expects attention.</p>
-      </div>
-      <div class="difference-grid">
-        <article class="difference-card">
-          <span class="difference-number">01</span>
-          <h3>Every action has a cost</h3>
-          <p>Movement and attacks compete for limited Action Points. Height, weapon reach, terrain, wounds, armor, Poise, fear, and positioning reshape every turn.</p>
-        </article>
-        <article class="difference-card">
-          <span class="difference-number">02</span>
-          <h3>Decisions change how the game plays</h3>
-          <p>Choices affect people, access, later dialogue, and the survivor Caelis becomes. Six divided gods pay attention, but none offers a simple good-or-evil answer.</p>
-        </article>
-        <article class="difference-card">
-          <span class="difference-number">03</span>
-          <h3>Exploration without a glowing trail</h3>
-          <p>Question people, read records, and search roads, homes, caves, ruins, and forests for clues that may complicate the answer you were seeking.</p>
-        </article>
-      </div>
-      <div class="systems-heading">
-        <p class="eyebrow">In the Steam demo</p>
-        <h3>Systems in play</h3>
-      </div>
-      <div class="feature-list feature-list-compact">
-        <article class="feature-item">
-          <span class="feature-number">01</span>
-          <h3>Tactical combat</h3>
-          <p>Combat takes place on a grid. Movement costs Action Points, and positioning, height, weapon reach, armor, wounds, and Poise affect what a player can do each turn.</p>
-        </article>
-        <article class="feature-item">
-          <span class="feature-number">02</span>
-          <h3>Explore without quest markers</h3>
-          <p>The game does not draw a glowing line to every objective. Players find quests and information by talking to people, reading, and checking houses, roads, caves, ruins, and forests.</p>
-        </article>
-        <article class="feature-item">
-          <span class="feature-number">03</span>
-          <h3>The Shimmers</h3>
-          <p>Shimmers distort familiar places and make them dangerous. Their cause is one of the game's central mysteries.</p>
-        </article>
-        <article class="feature-item">
-          <span class="feature-number">04</span>
-          <h3>Hunger and Psych</h3>
-          <p>Hunger and Psych continue outside combat. Ignoring them can leave Caelis in worse condition when the next fight starts.</p>
-        </article>
-        <article class="feature-item">
-          <span class="feature-number">05</span>
-          <h3>Character customization</h3>
-          <p>Players choose Caelis's appearance, hair, beard, colors, and equipment. His world sprite and portrait both reflect those choices.</p>
-        </article>
-        <article class="feature-item">
-          <span class="feature-number">06</span>
-          <h3>The six gods</h3>
-          <p>Each god wants something different for the world. They notice what Caelis says and does, and their interests do not align.</p>
-        </article>
+        <video class="trailer-video" controls preload="metadata" playsinline poster="assets/trailer/official-trailer-poster.png" aria-label="The Cradle of Life official demo trailer">
+          <source src="assets/trailer/CradleOfLife_Official_Demo_Trailer_1080p.mp4" type="video/mp4">
+          <a href="https://youtu.be/dXcrJQChVNU">Watch the official demo trailer on YouTube</a>.
+        </video>
       </div>
     </section>
 
@@ -231,7 +197,7 @@ The Steam demo contains the opening section in Thornvale and introduces the Shim
           </button>
           <figcaption><span><strong>Character creation</strong><small>Build a matching sprite and portrait</small></span><a href="assets/screenshots/04-character-customization.jpg" download>Download JPG</a></figcaption>
         </figure>
-        <figure class="gallery-item">
+        <figure class="gallery-item gallery-item-secondary" hidden>
           <button class="gallery-open" type="button" data-gallery-index="4" data-full="assets/screenshots/05-shimmer-combat.jpg" data-caption="Shimmer combat - hostile terrain and multiple enemies">
             <img src="assets/screenshots/05-shimmer-combat.jpg" alt="Caelis facing several Shimmer Kings amid violet Shimmer corruption." width="1920" height="1080" loading="lazy">
           </button>
@@ -243,31 +209,31 @@ The Steam demo contains the opening section in Thornvale and introduces the Shim
           </button>
           <figcaption><span><strong>Airealen speaks</strong><small>One of six gods who take notice</small></span><a href="assets/screenshots/06-airealen-dialogue.jpg" download>Download JPG</a></figcaption>
         </figure>
-        <figure class="gallery-item">
+        <figure class="gallery-item gallery-item-secondary" hidden>
           <button class="gallery-open" type="button" data-gallery-index="6" data-full="assets/screenshots/07-thornvale-castle-bridge.jpg" data-caption="Thornvale Castle - a location in the current demo">
             <img src="assets/screenshots/07-thornvale-castle-bridge.jpg" alt="Caelis crossing a long stone bridge toward Thornvale Castle." width="1920" height="1080" loading="lazy">
           </button>
           <figcaption><span><strong>Thornvale Castle</strong><small>A current demo location</small></span><a href="assets/screenshots/07-thornvale-castle-bridge.jpg" download>Download JPG</a></figcaption>
         </figure>
-        <figure class="gallery-item">
+        <figure class="gallery-item gallery-item-secondary" hidden>
           <button class="gallery-open" type="button" data-gallery-index="7" data-full="assets/screenshots/08-tactical-combat-poise.jpg" data-caption="Poise under pressure - forced movement and psychological pressure">
             <img src="assets/screenshots/08-tactical-combat-poise.jpg" alt="Caelis being pulled toward a Shimmer King while psychological pressure alters the fight." width="1920" height="1080" loading="lazy">
           </button>
           <figcaption><span><strong>Poise under pressure</strong><small>Forced movement and psychological pressure</small></span><a href="assets/screenshots/08-tactical-combat-poise.jpg" download>Download JPG</a></figcaption>
         </figure>
-        <figure class="gallery-item">
+        <figure class="gallery-item gallery-item-secondary" hidden>
           <button class="gallery-open" type="button" data-gallery-index="8" data-full="assets/screenshots/09-unstable-realm.jpg" data-caption="An unstable realm - environmental pressure and altered color">
             <img src="assets/screenshots/09-unstable-realm.jpg" alt="Caelis moving through a dark red environment distorted by an unstable atmosphere." width="1447" height="1080" loading="lazy">
           </button>
           <figcaption><span><strong>Unstable realm</strong><small>Environmental pressure and altered color</small></span><a href="assets/screenshots/09-unstable-realm.jpg" download>Download JPG</a></figcaption>
         </figure>
-        <figure class="gallery-item">
+        <figure class="gallery-item gallery-item-secondary" hidden>
           <button class="gallery-open" type="button" data-gallery-index="9" data-full="assets/screenshots/10-forest-exploration.jpg" data-caption="Forest exploration - no glowing objective trail">
             <img src="assets/screenshots/10-forest-exploration.jpg" alt="Caelis following a narrow forest path surrounded by dense trees and foliage." width="1464" height="1080" loading="lazy">
           </button>
           <figcaption><span><strong>Forest exploration</strong><small>No glowing objective trail</small></span><a href="assets/screenshots/10-forest-exploration.jpg" download>Download JPG</a></figcaption>
         </figure>
-        <figure class="gallery-item">
+        <figure class="gallery-item gallery-item-secondary" hidden>
           <button class="gallery-open" type="button" data-gallery-index="10" data-full="assets/screenshots/11-main-menu.jpg" data-caption="Main menu - condition, survival status, and character commands">
             <img src="assets/screenshots/11-main-menu.jpg" alt="Current main menu showing Caelis's portrait, condition, Hunger, Psych, and character commands." width="1024" height="768" loading="lazy">
           </button>
@@ -279,6 +245,95 @@ The Steam demo contains the opening section in Thornvale and introduces the Shim
           </button>
           <figcaption><span><strong>Mother of Spiders</strong><small>A tactical boss encounter</small></span><a href="assets/screenshots/12-mother-of-spiders-fight.jpg" download>Download JPG</a></figcaption>
         </figure>
+      </div>
+      <div class="gallery-more">
+        <button class="button button-secondary" type="button" data-gallery-toggle aria-expanded="false">View all 12 screenshots</button>
+        <a href="downloads/The_Cradle_of_Life_Press_Kit.zip" download>Download all screenshots in the press kit</a>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">Descriptions for coverage</p>
+          <h2 id="about-title">About the game</h2>
+        </div>
+        <p class="heading-note">Use these descriptions as written or shorten them for coverage.</p>
+      </div>
+
+      <div class="copy-stack">
+        <article class="copy-block copy-block-primary">
+          <div class="copy-label"><h3>One-sentence description</h3><span>30 words</span></div>
+          <p data-copy-text>The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife and draws six gods into his path.</p>
+          <button class="copy-button" type="button" data-copy-button>Copy text</button>
+        </article>
+
+        <details class="copy-block copy-collapsible">
+          <summary><span><strong>Short description</strong><small>87 words</small></span><span class="copy-summary-action">Open</span></summary>
+          <div class="copy-collapsible-body">
+            <p data-copy-text>The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife. Combat takes place on a grid where movement and attacks use Action Points, and positioning, height, reach, wounds, Poise, Hunger, and Psych affect what happens next. Outside combat, players question people and search Thornvale without an objective trail. Six gods notice Caelis's decisions, but none of them agrees on what should happen to the world. The Steam demo covers the opening section in Thornvale.</p>
+            <button class="copy-button" type="button" data-copy-button>Copy text</button>
+          </div>
+        </details>
+
+        <details class="copy-block copy-collapsible">
+          <summary><span><strong>Long description</strong><small>162 words</small></span><span class="copy-summary-action">Open</span></summary>
+          <div class="copy-collapsible-body">
+            <p data-copy-text>Shimmers are appearing without warning. They alter familiar places, and sometimes people or entire villages disappear.
+
+After a Shimmer takes his wife, Caelis searches for the Needle, a forgotten relic that may explain what happened. The search begins in Thornvale. The game does not mark every answer; players need to question people, read records, and check roads, homes, caves, ruins, and forests.
+
+Combat uses a tactical grid and Action Points. Movement and attacks draw from the same pool. Height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so Caelis's condition when a fight begins matters.
+
+Players can customize Caelis's appearance across his world sprite and portrait. Weapon familiarity and Resolve develop through play. Six gods respond to what Caelis says and does, and each one wants a different future for the world.
+
+The Steam demo contains the opening section in Thornvale. It introduces the Shimmers and the gods without explaining their larger role.</p>
+            <button class="copy-button" type="button" data-copy-button>Copy text</button>
+          </div>
+        </details>
+      </div>
+
+      <div class="play-section" id="features" aria-labelledby="features-title">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Systems in the current demo</p>
+            <h3 id="features-title">How it plays</h3>
+          </div>
+          <p class="heading-note">The systems below are playable now in the Steam demo.</p>
+        </div>
+
+        <div class="feature-list feature-list-compact">
+          <article class="feature-item">
+            <span class="feature-number">01</span>
+            <h3>Tactical combat</h3>
+            <p>Movement and attacks use the same Action Point pool. Positioning, height, reach, terrain, wounds, armor, Poise, and fear determine the available choices.</p>
+          </article>
+          <article class="feature-item">
+            <span class="feature-number">02</span>
+            <h3>Exploration without quest trails</h3>
+            <p>Objectives do not draw a path across the map. Players find quests and clues by talking to people, reading records, and checking the environment.</p>
+          </article>
+          <article class="feature-item">
+            <span class="feature-number">03</span>
+            <h3>The Shimmers</h3>
+            <p>Shimmers alter familiar places, enemies, and terrain. The demo shows what entering one does without explaining where they come from.</p>
+          </article>
+          <article class="feature-item">
+            <span class="feature-number">04</span>
+            <h3>Hunger and Psych</h3>
+            <p>Hunger and Psych continue outside combat. Arriving at a fight in poor condition changes the problem before the first turn.</p>
+          </article>
+          <article class="feature-item">
+            <span class="feature-number">05</span>
+            <h3>Character customization</h3>
+            <p>Players choose Caelis's appearance, hair, beard, colors, and equipment. His world sprite and portrait reflect the same choices.</p>
+          </article>
+          <article class="feature-item">
+            <span class="feature-number">06</span>
+            <h3>The six gods</h3>
+            <p>The gods respond to what Caelis says and does. Each wants a different future, and none provides a simple good-or-evil answer.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -310,22 +365,50 @@ The Steam demo contains the opening section in Thornvale and introduces the Shim
       </div>
     </section>
 
-    <section class="trailer-section" id="trailer" aria-labelledby="trailer-title">
-      <div class="trailer-inner">
-        <div class="trailer-copy">
-          <p class="eyebrow">Official video</p>
-          <h2 id="trailer-title">Official demo trailer</h2>
-          <p>Watch the full trailer here, on YouTube, or download the press-ready 1080p MP4.</p>
-          <div class="trailer-actions">
-            <a class="button button-primary" href="https://youtu.be/dXcrJQChVNU" target="_blank" rel="noopener">Watch on YouTube</a>
-            <a class="button button-secondary" href="assets/trailer/CradleOfLife_Official_Demo_Trailer_1080p.mp4" download>Download 1080p MP4</a>
-            <a class="button button-secondary" href="https://store.steampowered.com/app/4580240/The_Cradle_of_Life/" target="_blank" rel="noopener">View on Steam</a>
+    <section class="download-section" id="downloads" aria-labelledby="downloads-title">
+      <div class="download-inner">
+        <div>
+          <p class="eyebrow">All media in one file</p>
+          <h2 id="downloads-title">Download the press kit</h2>
+          <p>Full-resolution screenshots, current web artwork, approved fact-sheet copy, developer information, creator guidelines, and source notes.</p>
+          <a class="button button-primary button-large" href="downloads/The_Cradle_of_Life_Press_Kit.zip" download>Download ZIP · 59 MB</a>
+          <div class="fact-sheet-links" aria-label="Localized fact sheets">
+            <span>One-page fact sheets</span>
+            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_EN.pdf" download>English</a>
+            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_JA.pdf" download>日本語</a>
+            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_KO.pdf" download>한국어</a>
+            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_ZH-CN.pdf" download>简体中文</a>
+            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_ZH-TW.pdf" download>繁體中文</a>
           </div>
         </div>
-        <video class="trailer-video" controls preload="metadata" playsinline poster="assets/trailer/official-trailer-poster.png" aria-label="The Cradle of Life official demo trailer">
-          <source src="assets/trailer/CradleOfLife_Official_Demo_Trailer_1080p.mp4" type="video/mp4">
-          <a href="https://youtu.be/dXcrJQChVNU">Watch the official demo trailer on YouTube</a>.
-        </video>
+        <div class="download-contents" aria-label="Press kit archive contents">
+          <span>The_Cradle_of_Life_Press_Kit.zip</span>
+          <ul>
+            <li>README.txt</li>
+            <li>Fact_Sheet/</li>
+            <li>Logos/</li>
+            <li>Key_Art/</li>
+            <li>Screenshots/</li>
+            <li>Gameplay_Captures/</li>
+            <li>Trailer/</li>
+            <li>Creator_Guidelines/</li>
+            <li>Developer/</li>
+            <li>Contact/</li>
+          </ul>
+          <div class="individual-assets">
+            <span>Current web artwork</span>
+            <a href="assets/key-art/cradle-key-art.png" download>Web key art PNG · 816 × 624 · 0.53 MB</a>
+            <a href="assets/key-art/steam-capsule.jpg" download>Steam capsule JPG · 616 × 353 · 0.09 MB</a>
+            <a href="assets/logo/steam-header.jpg" download>Steam header JPG · 460 × 215 · 0.05 MB</a>
+            <a href="assets/logo/CradleOfLife_Logo_Transparent.png" download>Transparent logo PNG · 1280 × 720 · 0.05 MB</a>
+          </div>
+          <div class="master-assets">
+            <p data-master-assets-pending>A print-quality key-art master is not available yet.</p>
+            <a class="button button-secondary" href="#" download hidden data-transparent-logo-png>Download Transparent Logo</a>
+            <a class="button button-secondary" href="#" download hidden data-transparent-logo-svg>Download Transparent Logo (SVG)</a>
+            <a class="button button-secondary" href="#" download hidden data-key-art-master>Download Key Art</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -369,7 +452,7 @@ The Steam demo contains the opening section in Thornvale and introduces the Shim
           </figure>
         </div>
         <div>
-          <p class="eyebrow">Developer record <span aria-hidden="true">/ A world made by hand</span></p>
+          <p class="eyebrow">About Garrett</p>
           <h2 id="developer-title">Garrett Mickelsen</h2>
           <div class="developer-bio">
             <p>Garrett Mickelsen is the solo developer of The Cradle of Life, an independent tactical RPG made in RPG Maker MZ. He is also an active-duty U.S. Marine officer and military historian. The game began as a personal project built around his interests in history, mythology, and storytelling. Some of its oldest lore came from stories his father told around campfires when he was young.</p>
@@ -421,53 +504,6 @@ The Steam demo contains the opening section in Thornvale and introduces the Shim
         <div><dt>Naerun</dt><dd>NAY-run</dd></div>
         <div><dt>Zhal</dt><dd>ZALL</dd></div>
       </dl>
-    </section>
-
-    <section class="download-section" id="downloads" aria-labelledby="downloads-title">
-      <div class="download-inner">
-        <div>
-          <p class="eyebrow">All media in one file</p>
-          <h2 id="downloads-title">Download the press kit</h2>
-          <p>Full-resolution screenshots, current web artwork, approved fact-sheet copy, developer information, creator guidelines, and source notes.</p>
-          <a class="button button-primary button-large" href="downloads/The_Cradle_of_Life_Press_Kit.zip" download>Download ZIP</a>
-          <div class="fact-sheet-links" aria-label="Localized fact sheets">
-            <span>One-page fact sheets</span>
-            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_EN.pdf" download>English</a>
-            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_JA.pdf" download>日本語</a>
-            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_KO.pdf" download>한국어</a>
-            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_ZH-CN.pdf" download>简体中文</a>
-            <a href="output/pdf/The_Cradle_of_Life_Fact_Sheet_ZH-TW.pdf" download>繁體中文</a>
-          </div>
-        </div>
-        <div class="download-contents" aria-label="Press kit archive contents">
-          <span>The_Cradle_of_Life_Press_Kit.zip</span>
-          <ul>
-            <li>README.txt</li>
-            <li>Fact_Sheet/</li>
-            <li>Logos/</li>
-            <li>Key_Art/</li>
-            <li>Screenshots/</li>
-            <li>Gameplay_Captures/</li>
-            <li>Trailer/</li>
-            <li>Creator_Guidelines/</li>
-            <li>Developer/</li>
-            <li>Contact/</li>
-          </ul>
-          <div class="individual-assets">
-            <span>Current web artwork</span>
-            <a href="assets/key-art/cradle-key-art.png" download>Current web key art PNG</a>
-            <a href="assets/key-art/steam-capsule.jpg" download>Current Steam capsule JPG</a>
-            <a href="assets/logo/steam-header.jpg" download>Current Steam header JPG</a>
-            <a href="assets/logo/CradleOfLife_Logo_Transparent.png" download>Red transparent logo PNG</a>
-          </div>
-          <div class="master-assets">
-            <p data-master-assets-pending>A print-quality key-art master is not available yet.</p>
-            <a class="button button-secondary" href="#" download hidden data-transparent-logo-png>Download Transparent Logo</a>
-            <a class="button button-secondary" href="#" download hidden data-transparent-logo-svg>Download Transparent Logo (SVG)</a>
-            <a class="button button-secondary" href="#" download hidden data-key-art-master>Download Key Art</a>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">

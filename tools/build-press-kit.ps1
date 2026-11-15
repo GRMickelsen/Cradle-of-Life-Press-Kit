@@ -40,7 +40,7 @@ Release status: Coming soon
 Platforms: Windows and macOS
 Press contact: $pressEmail
 
-This archive was assembled from current public Steam materials and repository main on November 6, 2026.
+This archive was assembled from current public Steam materials and repository main on November 15, 2026.
 Please preserve screenshot aspect ratios and do not imply that unannounced content is included in the current demo.
 "@
 
@@ -63,25 +63,23 @@ Press contact: $pressEmail
 
 ONE-SENTENCE DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG where Caelis's search for answers becomes a hunt for the Needle, drawing him through reality-warping Shimmers and into the attention of six competing gods.
+The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife and draws six gods into his path.
 
 SHORT DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a weathered warrior whose search for answers becomes a hunt for the Needle. Combat unfolds on a grid shaped by Action Points, positioning, height, weapon reach, Poise, wounds, Hunger, and Psych. Beyond battle, players explore Thornvale without objective trails, question its people, and read the environment for clues. Reality-warping Shimmers threaten familiar places, while six gods offer competing visions of suffering, survival, and humanity's future. The Steam demo covers the opening journey through Thornvale.
+The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife. Combat takes place on a grid where movement and attacks use Action Points, and positioning, height, reach, wounds, Poise, Hunger, and Psych affect what happens next. Outside combat, players question people and search Thornvale without an objective trail. Six gods notice Caelis's decisions, but none of them agrees on what should happen to the world. The Steam demo covers the opening section in Thornvale.
 
 LONG DESCRIPTION
 
-Shimmers are appearing without warning. They change familiar places, and sometimes whole villages disappear. The gods have been silent for centuries, but that silence is ending.
+Shimmers are appearing without warning. They alter familiar places, and sometimes people or entire villages disappear.
 
-After a Shimmer takes his wife, Caelis's search to understand what happened becomes a hunt for the Needle—a forgotten relic, a possible answer, and a key to forces larger than any kingdom. The search begins in Thornvale, where roads, ruins, homes, and wilderness hold as much information as the people living there. The game does not mark every answer. Players are expected to ask questions, read, and look around.
+After a Shimmer takes his wife, Caelis searches for the Needle, a forgotten relic that may explain what happened. The search begins in Thornvale. The game does not mark every answer; players need to question people, read records, and check roads, homes, caves, ruins, and forests.
 
-Combat uses a tactical grid and Action Points. Movement, height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so arriving at a fight in poor condition matters.
+Combat uses a tactical grid and Action Points. Movement and attacks draw from the same pool. Height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so Caelis's condition when a fight begins matters.
 
-Players customize Caelis's appearance across his world sprite and portrait. Weapon familiarity, Resolve, and decisions develop over the course of play. Six gods watch those decisions, each offering a different answer to suffering, survival, truth, and humanity's future. Their attention turns every conversation and decision into part of a larger argument about what the world should become.
+Players can customize Caelis's appearance across his world sprite and portrait. Weapon familiarity and Resolve develop through play. Six gods respond to what Caelis says and does, and each one wants a different future for the world.
 
-The world is dying. What should come next?
-
-The Steam demo contains the opening section in Thornvale and introduces the Shimmers and six gods without revealing their larger role.
+The Steam demo contains the opening section in Thornvale. It introduces the Shimmers and the gods without explaining their larger role.
 
 CONTENT WARNINGS
 

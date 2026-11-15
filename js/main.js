@@ -142,6 +142,100 @@
   };
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  const story = document.querySelector("[data-story]");
+  const storyPanels = Array.from(document.querySelectorAll("[data-story-panel]"));
+  const storyVisuals = Array.from(document.querySelectorAll("[data-story-visual]"));
+  const storySteps = Array.from(document.querySelectorAll("[data-story-step]"));
+  const storyJumps = Array.from(document.querySelectorAll("[data-story-jump]"));
+  const storyScrollCue = document.querySelector(".story-scroll-cue");
+  let activeStoryStage = 0;
+
+  const setStoryStage = (stage) => {
+    const nextStage = Math.max(0, Math.min(stage, storyPanels.length - 1));
+    activeStoryStage = nextStage;
+
+    storyPanels.forEach((panel, index) => {
+      const isActive = index === nextStage;
+      panel.classList.toggle("is-active", isActive);
+      panel.setAttribute("aria-hidden", String(!isActive));
+    });
+
+    storyVisuals.forEach((visual, index) => {
+      const isActive = index === nextStage;
+      visual.classList.toggle("is-active", isActive);
+      if (visual instanceof HTMLVideoElement) {
+        if (isActive && !reducedMotion.matches && !document.hidden) {
+          visual.play().catch(() => {});
+        } else {
+          visual.pause();
+        }
+      }
+    });
+
+    storyJumps.forEach((button, index) => {
+      const isActive = index === nextStage;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-current", isActive ? "step" : "false");
+    });
+
+    storyScrollCue?.classList.toggle("is-hidden", nextStage !== 0);
+  };
+
+  if (story && storySteps.length > 0 && !reducedMotion.matches) {
+    if ("IntersectionObserver" in window) {
+      const storyObserver = new IntersectionObserver((entries) => {
+        const visibleStep = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visibleStep) setStoryStage(Number(visibleStep.target.dataset.storyStep));
+      }, { rootMargin: "-42% 0px -42% 0px", threshold: [0, 0.1, 0.5] });
+
+      storySteps.forEach((step) => storyObserver.observe(step));
+    } else {
+      const updateStoryFromScroll = () => {
+        const bounds = story.getBoundingClientRect();
+        const progress = Math.max(0, Math.min(0.999, -bounds.top / Math.max(1, bounds.height - window.innerHeight)));
+        setStoryStage(Math.floor(progress * storySteps.length));
+      };
+      window.addEventListener("scroll", updateStoryFromScroll, { passive: true });
+      updateStoryFromScroll();
+    }
+  }
+
+  storyJumps.forEach((button) => {
+    button.addEventListener("click", () => {
+      const stage = Number(button.dataset.storyJump);
+      const step = storySteps[stage];
+      if (!step) return;
+      const destination = window.scrollY + step.getBoundingClientRect().top + (step.offsetHeight / 2) - (window.innerHeight / 2);
+      window.scrollTo({ top: destination, behavior: reducedMotion.matches ? "auto" : "smooth" });
+    });
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    const activeVisual = storyVisuals[activeStoryStage];
+    if (!(activeVisual instanceof HTMLVideoElement)) return;
+    if (document.hidden || reducedMotion.matches) activeVisual.pause();
+    else activeVisual.play().catch(() => {});
+  });
+
+  const galleryToggle = document.querySelector("[data-gallery-toggle]");
+  const secondaryGalleryItems = Array.from(document.querySelectorAll(".gallery-item-secondary"));
+
+  galleryToggle?.addEventListener("click", () => {
+    const isExpanded = galleryToggle.getAttribute("aria-expanded") === "true";
+    secondaryGalleryItems.forEach((item) => { item.hidden = isExpanded; });
+    galleryToggle.setAttribute("aria-expanded", String(!isExpanded));
+    galleryToggle.textContent = isExpanded ? "View all 12 screenshots" : "Show six featured screenshots";
+
+    if (isExpanded) {
+      document.querySelector("#screenshots")?.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth" });
+    }
+  });
+
+  setStoryStage(0);
+
   const playbackObserver = "IntersectionObserver" in window
     ? new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
