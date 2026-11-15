@@ -192,6 +192,7 @@ Set-Content -LiteralPath (Join-Path $kitRoot "Contact\Official_Links.txt") -Valu
 
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\logo\steam-header.jpg") -Destination (Join-Path $kitRoot "Logos\The_Cradle_of_Life_Steam_Header.jpg")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\logo\CradleOfLife_ShortcutLogo_512x512.png") -Destination (Join-Path $kitRoot "Logos\CradleOfLife_ShortcutLogo_512x512.png")
+Copy-Item -LiteralPath (Join-Path $projectRoot "assets\logo\CradleOfLife_MainLogo_1232x706.png") -Destination (Join-Path $kitRoot "Logos\CradleOfLife_MainLogo_1232x706.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\cradle-key-art.png") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Key_Art.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\CradleOfLife_MainCapsule_1232x706.png") -Destination (Join-Path $kitRoot "Key_Art\CradleOfLife_MainCapsule_1232x706.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\CradleOfLife_VerticalCapsule_748x896.png") -Destination (Join-Path $kitRoot "Key_Art\CradleOfLife_VerticalCapsule_748x896.png")

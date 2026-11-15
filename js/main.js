@@ -219,32 +219,63 @@
   });
 
   if (story && storySteps.length > 0 && !reducedMotion.matches) {
-    let wheelLocked = false;
-    let wheelDistance = 0;
+    let inputLocked = false;
+    let touchStartY = null;
 
-    story.addEventListener("wheel", (event) => {
+    const storyIsPinned = () => {
       const bounds = story.getBoundingClientRect();
-      const isPinned = bounds.top <= 1 && bounds.bottom >= window.innerHeight - 1;
-      if (!isPinned || event.deltaY === 0) return;
+      return bounds.top <= 1 && bounds.bottom >= window.innerHeight - 1;
+    };
+
+    const unlockStoryInput = () => {
+      window.setTimeout(() => { inputLocked = false; }, 650);
+    };
+
+    window.addEventListener("wheel", (event) => {
+      if (!storyIsPinned() || event.deltaY === 0) return;
 
       const direction = Math.sign(event.deltaY);
       const nextStage = activeStoryStage + direction;
-      if (nextStage < 0 || nextStage >= storySteps.length) {
-        wheelDistance = 0;
-        return;
-      }
+      if (nextStage < 0 || nextStage >= storySteps.length) return;
 
       event.preventDefault();
-      if (wheelLocked) return;
+      if (inputLocked) return;
 
-      wheelDistance += event.deltaY;
-      if (Math.abs(wheelDistance) < 28) return;
-
-      wheelDistance = 0;
-      wheelLocked = true;
+      inputLocked = true;
       scrollToStoryStage(nextStage);
-      window.setTimeout(() => { wheelLocked = false; }, 760);
+      unlockStoryInput();
     }, { passive: false });
+
+    story.addEventListener("touchstart", (event) => {
+      touchStartY = event.changedTouches[0]?.clientY ?? null;
+    }, { passive: true });
+
+    story.addEventListener("touchmove", (event) => {
+      if (touchStartY !== null && storyIsPinned()) event.preventDefault();
+    }, { passive: false });
+
+    story.addEventListener("touchend", (event) => {
+      if (touchStartY === null) return;
+      const endY = event.changedTouches[0]?.clientY ?? touchStartY;
+      const distance = touchStartY - endY;
+      touchStartY = null;
+      if (inputLocked) return;
+      if (Math.abs(distance) < 36) return;
+
+      const direction = Math.sign(distance);
+      const nextStage = activeStoryStage + direction;
+      if (nextStage < 0) return;
+
+      inputLocked = true;
+      if (nextStage >= storySteps.length) {
+        document.querySelector("#facts")?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        scrollToStoryStage(nextStage);
+      }
+      unlockStoryInput();
+    }, { passive: true });
+
+    story.addEventListener("touchcancel", () => { touchStartY = null; }, { passive: true });
   }
 
   document.addEventListener("visibilitychange", () => {

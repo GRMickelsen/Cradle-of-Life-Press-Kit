@@ -40,11 +40,11 @@ The gallery shows six featured screenshots first and reveals the full set throug
 
 ## Update the opening sequence
 
-The four opening chapters are in `index.html` under `first-impression`. The first chapter places the supplied metallic logo over the logo-free 3840 × 1240 library artwork. The remaining chapters use the tactical-combat capture, Shimmer-combat capture, and the Gods and Cradle artwork. The layout and mobile framing are in the final sections of `css/style.css`; chapter switching is handled in `js/main.js`.
+The four opening chapters are in `index.html` under `first-impression`. The first chapter places a supplied metallic logo over the logo-free 3840 × 1240 library artwork. Desktop uses the 920 × 430 header logo; mobile uses the deeper 1232 × 706 logo layout over a Caelis-focused crop. The remaining chapters use the tactical-combat capture, Shimmer-combat capture, and the Gods and Cradle artwork. The layout and mobile framing are in the final sections of `css/style.css`; chapter switching is handled in `js/main.js`.
 
 Keep the opening to a small number of short, specific ideas. If a video path changes, update both its `<source>` and poster image in `index.html`.
 
-Mouse-wheel input advances one chapter at a time with a short momentum lock. Touch scrolling uses proximity snap points. Both behaviors are defined in `js/main.js` and `css/style.css` and are disabled for reduced-motion users.
+Mouse-wheel input advances one chapter immediately and ignores the remaining momentum from that gesture. On touchscreens, one vertical swipe advances one chapter. Both behaviors are defined in `js/main.js` and are disabled for reduced-motion users.
 
 ## Update game descriptions
 

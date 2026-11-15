@@ -1829,8 +1829,6 @@ a:hover { color: #efda98; }
 }
 
 .story-step { min-height: 80svh; }
-.story-step { scroll-snap-align: center; scroll-snap-stop: always; }
-html { scroll-snap-type: y proximity; }
 
 .facts-section { padding-top: clamp(4.5rem, 7vw, 7rem); }
 
@@ -1956,7 +1954,6 @@ html { scroll-snap-type: y proximity; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-snap-type: none; }
   .first-impression { height: auto; min-height: 780px; }
   .story-sticky { position: relative; height: min(900px, 100svh); min-height: 780px; }
   .story-visual,
@@ -2075,9 +2072,9 @@ html { scroll-snap-type: y proximity; }
   .wordmark img { width: 60px; height: 60px; }
 
   .story-opening-art {
-    background-image: url("../assets/key-art/CradleOfLife_ShortcutCapsule_512x512.png");
-    background-position: center 68px;
-    background-size: 100% auto;
+    background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
+    background-position: 24% -42px;
+    background-size: auto 62%;
   }
 
   .story-gods-art {
@@ -2090,7 +2087,19 @@ html { scroll-snap-type: y proximity; }
   }
 
   .story-panel-title { bottom: 5rem; }
-  .hero-logo { display: none; }
+  .hero-logo {
+    position: absolute;
+    bottom: calc(100% + 0.25rem);
+    left: 0;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1232 / 706;
+    margin: 0;
+    background-image: url("../assets/logo/CradleOfLife_MainLogo_1232x706.png");
+    background-position: center;
+    background-size: 100% auto;
+    transform: none;
+  }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
 }
 
