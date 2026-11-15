@@ -2090,7 +2090,7 @@ a:hover { color: #efda98; }
 
   .story-opening-art {
     background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
-    background-position: 45% 18px;
+    background-position: 45% 63px;
     background-size: auto 34%;
   }
 
@@ -2136,7 +2136,7 @@ a:hover { color: #efda98; }
 
   .hero-logo::after {
     clip-path: inset(50% 0 0 28%);
-    transform: translate(30px, 60px);
+    transform: translate(30px, -30px);
   }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
 }
