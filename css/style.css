@@ -1980,7 +1980,7 @@ a:hover { color: #efda98; }
 .story-opening-art {
   background-color: #070706;
   background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
-  background-position: center 68px;
+  background-position: center 8px;
   background-repeat: no-repeat;
   background-size: auto calc(100% - 68px);
   filter: saturate(0.94) contrast(1.04);
@@ -2072,7 +2072,7 @@ a:hover { color: #efda98; }
 
   .story-opening-art {
     background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
-    background-position: 64% 68px;
+    background-position: 64% 8px;
     background-size: auto 62%;
   }
 
