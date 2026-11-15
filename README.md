@@ -40,7 +40,7 @@ The gallery shows six featured screenshots first and reveals the full set throug
 
 ## Update the opening sequence
 
-The four opening chapters are in `index.html` under `first-impression`. They currently use the key art, tactical-combat capture, Shimmer-combat capture, and pantheon portraits. The layout and mobile framing are in the final `Scroll-led first impression` section of `css/style.css`; chapter switching is handled in `js/main.js`.
+The four opening chapters are in `index.html` under `first-impression`. They currently use the main Steam capsule, tactical-combat capture, Shimmer-combat capture, and the Gods and Cradle artwork. Mobile uses the vertical Steam capsule. The layout and mobile framing are in the final sections of `css/style.css`; chapter switching is handled in `js/main.js`.
 
 Keep the opening to a small number of short, specific ideas. If a video path changes, update both its `<source>` and poster image in `index.html`.
 
@@ -64,11 +64,9 @@ The dedicated public press address is configured in `press-kit-config.json`:
 
 Update this value if the public press address changes, then rebuild the ZIP so its Contact file matches.
 
-## Pending optional asset
+## Optional assets
 
-Optional files are controlled through `press-kit-config.json`. A section or download stays hidden unless its configured file exists.
-
-- Print-quality key-art master
+Optional files are controlled through `press-kit-config.json`. A section or download stays hidden unless its configured file exists. The current developer headshot, gameplay captures, transparent logo, and 3840 × 1240 library hero are all configured.
 
 ## Replace the developer headshot
 
@@ -98,11 +96,13 @@ Each capture supports `preview`, `gif`, `webm`, `mp4`, and `still` paths in `pre
 
 The approved red logo is stored at `assets/logo/CradleOfLife_Logo_Transparent.png` and configured in `press-kit-config.json`. An optional matching red SVG can be added later.
 
+The compact metallic header logo is stored separately at `assets/logo/CradleOfLife_ShortcutLogo_512x512.png`.
+
 Do not upscale the existing Steam header or capsule.
 
-## Add the key-art master
+## Replace the key-art master
 
-Place the approved original at `assets/key-art/CradleOfLife_KeyArt_Master.png`. Configure `KEY_ART_MASTER.src` and `KEY_ART_MASTER.resolution` in `press-kit-config.json`.
+The current downloadable master is `assets/key-art/CradleOfLife_LibraryHero_3840x1240.png`. To replace it, update `KEY_ART_MASTER.src` and `KEY_ART_MASTER.resolution` in `press-kit-config.json`.
 
 Do not enlarge the current web art to create this file.
 

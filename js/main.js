@@ -154,6 +154,7 @@
   const setStoryStage = (stage) => {
     const nextStage = Math.max(0, Math.min(stage, storyPanels.length - 1));
     activeStoryStage = nextStage;
+    if (story) story.dataset.storyStage = String(nextStage);
 
     storyPanels.forEach((panel, index) => {
       const isActive = index === nextStage;

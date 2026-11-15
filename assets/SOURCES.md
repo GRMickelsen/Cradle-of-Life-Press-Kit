@@ -1,6 +1,6 @@
 # Asset Sources
 
-Selected on September 9, 2026, with gameplay, interface, trailer, and press assets refreshed November 6, 2026. Original game files were copied without modifying the game repository.
+Selected on September 9, 2026, with gameplay, interface, trailer, and press assets refreshed November 6, 2026. The approved Steam capsule artwork was refreshed November 15, 2026. Original game files were copied without modifying the game repository.
 
 ## Current repository main
 
@@ -31,6 +31,15 @@ Store page: `https://store.steampowered.com/app/4580240/The_Cradle_of_Life/`
 - `assets/trailer/CradleOfLife_Official_Demo_Trailer_1080p.mp4` from the approved `Cradle of Life Trailer v3.mp4`, encoded as H.264/AAC with web fast-start
 - `assets/trailer/official-trailer-poster.png` from the approved trailer thumbnail
 - YouTube: `https://youtu.be/dXcrJQChVNU`
+
+## Approved Steam capsule artwork
+
+Copied from `Desktop/My Game/Advertisement/Steam Images/Steam Capsules with Logo/` on November 15, 2026:
+
+- `assets/key-art/CradleOfLife_MainCapsule_1232x706.png` from `CRADLE OF LIFE_MAIN CAPSULE_1232x706_.png`
+- `assets/key-art/CradleOfLife_VerticalCapsule_748x896.png` from `CRADLE OF LIFE_VERTICAL CAPSULE_748x896_.png`
+- `assets/key-art/CradleOfLife_LibraryHero_3840x1240.png` from `CRADLE OF LIFE_LIBRARY HERO_3840x1240_.png`
+- `assets/logo/CradleOfLife_ShortcutLogo_512x512.png` from `CRADLE OF LIFE_SHORTCUT_ICON_512x512_Logo.png`
 
 ## Localized fact sheets
 

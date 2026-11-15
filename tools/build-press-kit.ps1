@@ -63,23 +63,23 @@ Press contact: $pressEmail
 
 ONE-SENTENCE DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife and draws six gods into his path.
+The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife and whose decisions attract six gods.
 
 SHORT DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife. Combat takes place on a grid where movement and attacks use Action Points, and positioning, height, reach, wounds, Poise, Hunger, and Psych affect what happens next. Outside combat, players question people and search Thornvale without an objective trail. Six gods notice Caelis's decisions, but none of them agrees on what should happen to the world. The Steam demo covers the opening section in Thornvale.
+The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife. Combat takes place on a grid where movement and attacks use Action Points. Positioning, height, reach, wounds, Poise, Hunger, and Psych affect each encounter. The opening takes place in Thornvale, where players question people and search for quests and clues. Six gods respond to Caelis's decisions, and each has a different plan for the world. The Steam demo covers the opening section in Thornvale.
 
 LONG DESCRIPTION
 
 Shimmers are appearing without warning. They alter familiar places, and sometimes people or entire villages disappear.
 
-After a Shimmer takes his wife, Caelis searches for the Needle, a forgotten relic that may explain what happened. The search begins in Thornvale. The game does not mark every answer; players need to question people, read records, and check roads, homes, caves, ruins, and forests.
+After a Shimmer takes his wife, Caelis searches for the Needle, a forgotten relic that may explain what happened. The search begins in Thornvale. Objectives leave the route open. Players progress by questioning people, reading records, and checking roads, homes, caves, ruins, and forests.
 
 Combat uses a tactical grid and Action Points. Movement and attacks draw from the same pool. Height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so Caelis's condition when a fight begins matters.
 
-Players can customize Caelis's appearance across his world sprite and portrait. Weapon familiarity and Resolve develop through play. Six gods respond to what Caelis says and does, and each one wants a different future for the world.
+Players can customize Caelis's appearance across his world sprite and portrait. Weapon familiarity and Resolve develop through play. Six gods respond to Caelis's decisions, and each one has a different plan for the world.
 
-The Steam demo contains the opening section in Thornvale. It introduces the Shimmers and the gods without explaining their larger role.
+The Steam demo contains the opening section in Thornvale. It introduces the Shimmers and the gods while leaving their larger role unresolved.
 
 CONTENT WARNINGS
 
@@ -191,7 +191,10 @@ Set-Content -LiteralPath (Join-Path $kitRoot "Contact\Press_Contact.txt") -Value
 Set-Content -LiteralPath (Join-Path $kitRoot "Contact\Official_Links.txt") -Value $socialLinks -Encoding utf8
 
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\logo\steam-header.jpg") -Destination (Join-Path $kitRoot "Logos\The_Cradle_of_Life_Steam_Header.jpg")
+Copy-Item -LiteralPath (Join-Path $projectRoot "assets\logo\CradleOfLife_ShortcutLogo_512x512.png") -Destination (Join-Path $kitRoot "Logos\CradleOfLife_ShortcutLogo_512x512.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\cradle-key-art.png") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Key_Art.png")
+Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\CradleOfLife_MainCapsule_1232x706.png") -Destination (Join-Path $kitRoot "Key_Art\CradleOfLife_MainCapsule_1232x706.png")
+Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\CradleOfLife_VerticalCapsule_748x896.png") -Destination (Join-Path $kitRoot "Key_Art\CradleOfLife_VerticalCapsule_748x896.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\steam-capsule.jpg") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Steam_Capsule.jpg")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\steam-page-background.jpg") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Steam_Background.jpg")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\trailer\official-trailer-poster.png") -Destination (Join-Path $kitRoot "Trailer\The_Cradle_of_Life_Official_Trailer_Poster.png")

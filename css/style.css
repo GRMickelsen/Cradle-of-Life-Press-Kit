@@ -1964,3 +1964,125 @@ a:hover { color: #efda98; }
   .story-scroll-cue,
   .story-steps { display: none; }
 }
+
+/* November capsule artwork and layout corrections. */
+.wordmark {
+  gap: 0.45rem;
+}
+
+.wordmark img {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  object-fit: contain;
+}
+
+.story-opening-art {
+  background-color: #070706;
+  background-image: url("../assets/key-art/CradleOfLife_MainCapsule_1232x706.png");
+  background-position: center calc(50% + 34px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: saturate(0.94) contrast(1.04);
+}
+
+.story-gods-art {
+  background-color: #050504;
+  background-image: url("../assets/key-art/cradle-key-art.png");
+  background-position: 76% calc(50% + 150px);
+  background-repeat: no-repeat;
+  background-size: min(76vw, 1120px) auto;
+  filter: saturate(0.94) contrast(1.05);
+}
+
+.first-impression[data-story-stage="0"] .story-shade {
+  background:
+    linear-gradient(0deg, rgba(5, 5, 4, 0.98) 0%, rgba(5, 5, 4, 0.82) 18%, rgba(5, 5, 4, 0.18) 48%, transparent 74%),
+    linear-gradient(90deg, rgba(5, 5, 4, 0.34), transparent 48%);
+}
+
+.story-panel-title {
+  top: auto;
+  bottom: 6.5rem;
+  transform: translateY(24px);
+}
+
+.story-panel-title.is-active { transform: none; }
+
+.story-panel-title .hero-hook {
+  max-width: 600px;
+  color: #eee2ce;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.feature-list-compact {
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.feature-list-compact .feature-item,
+.feature-list-compact .feature-item:nth-child(even) {
+  display: block;
+  min-width: 0;
+  padding: 1.6rem;
+  border: 0;
+  background:
+    linear-gradient(135deg, rgba(111, 196, 212, 0.035), transparent 60%),
+    rgba(11, 17, 22, 0.96);
+}
+
+.feature-list-compact .feature-item h3,
+.feature-list-compact .feature-item p {
+  overflow-wrap: anywhere;
+}
+
+.feature-list-compact .feature-item h3 {
+  font-size: clamp(1.55rem, 2.1vw, 2rem);
+  line-height: 1.08;
+}
+
+.feature-list-compact .feature-item p { margin-top: 0.75rem; }
+
+.download-section {
+  background:
+    linear-gradient(90deg, rgba(5, 9, 15, 0.99) 0%, rgba(6, 10, 18, 0.9) 47%, rgba(20, 12, 34, 0.46) 100%),
+    url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png") center / cover no-repeat,
+    #060a10;
+}
+
+@media (max-width: 1050px) {
+  .story-gods-art {
+    background-position: 72% calc(50% + 145px);
+    background-size: min(92vw, 990px) auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .wordmark img { width: 60px; height: 60px; }
+
+  .story-opening-art {
+    background-image: url("../assets/key-art/CradleOfLife_VerticalCapsule_748x896.png");
+    background-position: center 68px;
+    background-size: 100% auto;
+  }
+
+  .story-gods-art {
+    background-position: center calc(50% - 20px);
+    background-size: 118vw auto;
+  }
+
+  .first-impression[data-story-stage="0"] .story-shade {
+    background: linear-gradient(0deg, rgba(5, 5, 4, 0.99) 0%, rgba(5, 5, 4, 0.88) 27%, rgba(5, 5, 4, 0.13) 55%, transparent 76%);
+  }
+
+  .story-panel-title { bottom: 5rem; }
+  .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
+}
+
+@media (max-width: 420px) {
+  .wordmark img { width: 56px; height: 56px; }
+  .story-panel-title { bottom: 4.8rem; }
+}

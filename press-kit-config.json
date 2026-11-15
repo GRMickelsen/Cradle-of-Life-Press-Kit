@@ -11,8 +11,8 @@
     "resolution": "1280 x 720"
   },
   "KEY_ART_MASTER": {
-    "src": "",
-    "resolution": ""
+    "src": "assets/key-art/CradleOfLife_LibraryHero_3840x1240.png",
+    "resolution": "3840 x 1240"
   },
   "GAMEPLAY_CAPTURES": {
     "tactical-combat": {
