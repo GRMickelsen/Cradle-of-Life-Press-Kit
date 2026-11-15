@@ -40,6 +40,8 @@ Copied from `Desktop/My Game/Advertisement/Steam Images/Steam Capsules with Logo
 - `assets/key-art/CradleOfLife_VerticalCapsule_748x896.png` from `CRADLE OF LIFE_VERTICAL CAPSULE_748x896_.png`
 - `assets/key-art/CradleOfLife_LibraryHero_3840x1240.png` from `CRADLE OF LIFE_LIBRARY HERO_3840x1240_.png`
 - `assets/logo/CradleOfLife_ShortcutLogo_512x512.png` from `CRADLE OF LIFE_SHORTCUT_ICON_512x512_Logo.png`
+- `assets/logo/CradleOfLife_HeaderLogo_920x430.png` from `CRADLE OF LIFE_HEADER CAPSULE_920x430_LOGO.png`
+- `assets/key-art/CradleOfLife_ShortcutCapsule_512x512.png` from `CRADLE OF LIFE_SHORTCUT_ICON_512x512_.png`
 
 ## Localized fact sheets
 

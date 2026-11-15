@@ -44,6 +44,8 @@ The four opening chapters are in `index.html` under `first-impression`. The firs
 
 Keep the opening to a small number of short, specific ideas. If a video path changes, update both its `<source>` and poster image in `index.html`.
 
+Mouse-wheel input advances one chapter at a time with a short momentum lock. Touch scrolling uses proximity snap points. Both behaviors are defined in `js/main.js` and `css/style.css` and are disabled for reduced-motion users.
+
 ## Update game descriptions
 
 Open `index.html` and search for:
@@ -92,11 +94,9 @@ The website no longer has a separate gameplay-captures section. Approved capture
 
 Each capture supports `preview`, `gif`, `webm`, `mp4`, and `still` paths in `press-kit-config.json`. The build script uses these paths when assembling the ZIP.
 
-## Add the transparent logo
+## Replace the transparent logo
 
-The approved red logo is stored at `assets/logo/CradleOfLife_Logo_Transparent.png` and configured in `press-kit-config.json`. An optional matching red SVG can be added later.
-
-The compact metallic header logo is stored separately at `assets/logo/CradleOfLife_ShortcutLogo_512x512.png`.
+The current transparent press logo is `assets/logo/CradleOfLife_HeaderLogo_920x430.png` and is configured in `press-kit-config.json`. The compact navigation logo remains at `assets/logo/CradleOfLife_ShortcutLogo_512x512.png`.
 
 Do not upscale the existing Steam header or capsule.
 

@@ -1829,6 +1829,8 @@ a:hover { color: #efda98; }
 }
 
 .story-step { min-height: 80svh; }
+.story-step { scroll-snap-align: center; scroll-snap-stop: always; }
+html { scroll-snap-type: y proximity; }
 
 .facts-section { padding-top: clamp(4.5rem, 7vw, 7rem); }
 
@@ -1954,6 +1956,7 @@ a:hover { color: #efda98; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-snap-type: none; }
   .first-impression { height: auto; min-height: 780px; }
   .story-sticky { position: relative; height: min(900px, 100svh); min-height: 780px; }
   .story-visual,
@@ -1980,7 +1983,7 @@ a:hover { color: #efda98; }
 .story-opening-art {
   background-color: #070706;
   background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
-  background-position: center 8px;
+  background-position: center -42px;
   background-repeat: no-repeat;
   background-size: auto calc(100% - 68px);
   filter: saturate(0.94) contrast(1.04);
@@ -2013,7 +2016,8 @@ a:hover { color: #efda98; }
   width: min(520px, 80vw);
   aspect-ratio: 1.5;
   margin: -0.5rem 0 -1.2rem;
-  background: url("../assets/logo/CradleOfLife_ShortcutLogo_512x512.png") center 48% / 100% auto no-repeat;
+  background: url("../assets/logo/CradleOfLife_HeaderLogo_920x430.png") center / 100% auto no-repeat;
+  transform: translate(60px, -60px);
 }
 
 .story-panel-title .hero-hook {
@@ -2071,9 +2075,9 @@ a:hover { color: #efda98; }
   .wordmark img { width: 60px; height: 60px; }
 
   .story-opening-art {
-    background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
-    background-position: 64% 8px;
-    background-size: auto 62%;
+    background-image: url("../assets/key-art/CradleOfLife_ShortcutCapsule_512x512.png");
+    background-position: center 68px;
+    background-size: 100% auto;
   }
 
   .story-gods-art {
@@ -2086,7 +2090,7 @@ a:hover { color: #efda98; }
   }
 
   .story-panel-title { bottom: 5rem; }
-  .hero-logo { width: min(360px, 88vw); margin-bottom: -1rem; }
+  .hero-logo { display: none; }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
 }
 

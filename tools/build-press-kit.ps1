@@ -195,6 +195,7 @@ Copy-Item -LiteralPath (Join-Path $projectRoot "assets\logo\CradleOfLife_Shortcu
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\cradle-key-art.png") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Key_Art.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\CradleOfLife_MainCapsule_1232x706.png") -Destination (Join-Path $kitRoot "Key_Art\CradleOfLife_MainCapsule_1232x706.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\CradleOfLife_VerticalCapsule_748x896.png") -Destination (Join-Path $kitRoot "Key_Art\CradleOfLife_VerticalCapsule_748x896.png")
+Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\CradleOfLife_ShortcutCapsule_512x512.png") -Destination (Join-Path $kitRoot "Key_Art\CradleOfLife_ShortcutCapsule_512x512.png")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\steam-capsule.jpg") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Steam_Capsule.jpg")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\key-art\steam-page-background.jpg") -Destination (Join-Path $kitRoot "Key_Art\The_Cradle_of_Life_Steam_Background.jpg")
 Copy-Item -LiteralPath (Join-Path $projectRoot "assets\trailer\official-trailer-poster.png") -Destination (Join-Path $kitRoot "Trailer\The_Cradle_of_Life_Official_Trailer_Poster.png")
