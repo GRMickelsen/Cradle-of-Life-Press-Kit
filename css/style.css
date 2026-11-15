@@ -2012,11 +2012,7 @@ a:hover { color: #efda98; }
 .story-panel-title.is-active { transform: none; }
 
 .hero-logo {
-  width: min(520px, 80vw);
-  aspect-ratio: 1.5;
-  margin: -0.5rem 0 -1.2rem;
-  background: url("../assets/logo/CradleOfLife_HeaderLogo_920x430.png") center / 100% auto no-repeat;
-  transform: translate(60px, -60px);
+  display: none;
 }
 
 .story-panel-title .hero-hook {
@@ -2061,6 +2057,55 @@ a:hover { color: #efda98; }
     linear-gradient(90deg, rgba(5, 9, 15, 0.99) 0%, rgba(6, 10, 18, 0.9) 47%, rgba(20, 12, 34, 0.46) 100%),
     url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png") center / cover no-repeat,
     #060a10;
+}
+
+@media (min-width: 721px) {
+  .story-sticky::before,
+  .story-sticky::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    width: clamp(620px, 42vw, 780px);
+    aspect-ratio: 1232 / 706;
+    background: url("../assets/logo/CradleOfLife_MainLogo_1232x706.png") center / 100% auto no-repeat;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 600ms ease;
+  }
+
+  .first-impression[data-story-stage="0"] .story-sticky::before,
+  .first-impression[data-story-stage="0"] .story-sticky::after {
+    opacity: 1;
+  }
+
+  .story-sticky::before {
+    top: 86px;
+    left: max(4vw, calc((100vw - var(--content)) / 2));
+    clip-path: inset(0 42% 55% 0);
+  }
+
+  .story-sticky::after {
+    right: 3vw;
+    bottom: 140px;
+    clip-path: inset(50% 0 0 28%);
+  }
+
+  .first-impression[data-story-stage="1"] .story-shade,
+  .first-impression[data-story-stage="2"] .story-shade,
+  .first-impression[data-story-stage="3"] .story-shade {
+    background:
+      linear-gradient(90deg, rgba(5, 5, 4, 0.84) 0%, rgba(5, 5, 4, 0.58) 29%, rgba(5, 5, 4, 0.18) 58%, rgba(5, 5, 4, 0.03) 100%),
+      linear-gradient(0deg, rgba(5, 5, 4, 0.75) 0%, transparent 39%);
+  }
+
+  .first-impression[data-story-stage="1"] .story-video,
+  .first-impression[data-story-stage="2"] .story-video {
+    filter: saturate(1.02) contrast(1.02) brightness(1.18);
+  }
+
+  .first-impression[data-story-stage="3"] .story-gods-art {
+    filter: saturate(1.01) contrast(1.03) brightness(1.12);
+  }
 }
 
 @media (max-width: 1050px) {
