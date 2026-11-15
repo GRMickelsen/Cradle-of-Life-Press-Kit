@@ -2065,7 +2065,7 @@ a:hover { color: #efda98; }
     content: "";
     position: absolute;
     z-index: 3;
-    width: clamp(620px, 42vw, 780px);
+    width: clamp(680px, 46vw, 900px);
     aspect-ratio: 1232 / 706;
     background: url("../assets/logo/CradleOfLife_MainLogo_1232x706.png") center / 100% auto no-repeat;
     opacity: 0;
@@ -2136,7 +2136,16 @@ a:hover { color: #efda98; }
   .first-impression[data-story-stage="1"] .story-shade,
   .first-impression[data-story-stage="2"] .story-shade,
   .first-impression[data-story-stage="3"] .story-shade {
-    background: linear-gradient(0deg, rgba(5, 5, 4, 0.9) 0%, rgba(5, 5, 4, 0.61) 31%, rgba(5, 5, 4, 0.12) 61%, transparent 82%);
+    background: linear-gradient(0deg, rgba(5, 5, 4, 0.93) 0%, rgba(5, 5, 4, 0.66) 31%, rgba(5, 5, 4, 0.15) 61%, transparent 82%);
+  }
+
+  .first-impression[data-story-stage="1"] .story-video,
+  .first-impression[data-story-stage="2"] .story-video {
+    filter: saturate(1.03) contrast(1.02) brightness(1.23);
+  }
+
+  .first-impression[data-story-stage="3"] .story-gods-art {
+    filter: saturate(1.02) contrast(1.02) brightness(1.14);
   }
 
   .story-panel-title { bottom: 5rem; }
