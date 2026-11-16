@@ -63,23 +63,21 @@ Press contact: $pressEmail
 
 ONE-SENTENCE DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife and whose decisions attract six gods.
+The Cradle of Life is a dark-fantasy tactical RPG combining deliberate grid combat, unguided exploration, survival pressure, and consequential choices in a world being torn apart by Shimmers and six divided gods.
 
 SHORT DESCRIPTION
 
-The Cradle of Life is a dark-fantasy tactical RPG about Caelis, a warrior searching for the Needle after a Shimmer takes his wife. Combat takes place on a grid where movement and attacks use Action Points. Positioning, height, reach, wounds, Poise, Hunger, and Psych affect each encounter. The opening takes place in Thornvale, where players question people and search for quests and clues. Six gods respond to Caelis's decisions, and each has a different plan for the world. The Steam demo covers the opening section in Thornvale.
+The Cradle of Life is a dark-fantasy tactical RPG built around deliberate grid combat, unguided exploration, and difficult choices in a world growing less stable by the day. As Caelis, players investigate Shimmers that distort places, memory, and human lives while managing Action Points, terrain, weapon reach, Poise, wounds, Hunger, and Psych. People and records often disagree, and six gods with incompatible visions respond to what Caelis does. The Steam demo introduces Thornvale, its surrounding wilderness, and the first signs of a larger crisis.
 
 LONG DESCRIPTION
 
-Shimmers are appearing without warning. They alter familiar places, and sometimes people or entire villages disappear.
+Across the land, Shimmers appear without warning. They alter places, bodies, memory, and distance. Villages disappear, old dangers return, and six gods who have been silent for centuries begin speaking again. Caelis survives the destruction of Craighollow and reaches Thornvale, where a local crisis draws him into questions no witness, record, or god can answer completely.
 
-After a Shimmer takes his wife, Caelis searches for the Needle, a forgotten relic that may explain what happened. The search begins in Thornvale. Objectives leave the route open. Players progress by questioning people, reading records, and checking roads, homes, caves, ruins, and forests.
+Exploration is built around observation rather than a trail of objective markers. Players question people, read what was left behind, and search roads, homes, caves, ruins, and forests for discoveries that may complicate the problem they were trying to solve. Hunger and Psych persist outside battle, turning time and unstable places into pressures of their own.
 
-Combat uses a tactical grid and Action Points. Movement and attacks draw from the same pool. Height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Hunger and Psych continue outside combat, so Caelis's condition when a fight begins matters.
+Combat takes place on a tactical grid. Movement and attacks draw from the same Action Point pool. Height, weapon reach, armor, wounds, Poise, fear, and terrain affect each turn. Caelis's appearance changes in both his world sprite and portrait, while weapon familiarity, Resolve, and decisions shape the survivor he becomes.
 
-Players can customize Caelis's appearance across his world sprite and portrait. Weapon familiarity and Resolve develop through play. Six gods respond to Caelis's decisions, and each one has a different plan for the world.
-
-The Steam demo contains the opening section in Thornvale. It introduces the Shimmers and the gods while leaving their larger role unresolved.
+Caelis's road eventually leads toward the Needle, a forgotten relic tied to the world's history, and the Cradle beyond the Great Ocean. Neither offers a simple answer. The Steam demo covers the opening in Thornvale and introduces the Shimmers, the gods, and the human consequences of a world becoming less stable.
 
 CONTENT WARNINGS
 

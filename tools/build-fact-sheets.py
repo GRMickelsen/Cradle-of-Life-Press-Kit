@@ -41,8 +41,8 @@ CONTENT = {
         "locale": "English",
         "game_title": "The Cradle of Life",
         "pitch": (
-            "A dark-fantasy tactical RPG about Caelis, a weathered warrior whose search for answers becomes a hunt for the Needle. "
-            "Deliberate grid combat, decisions with visible consequences, and unguided exploration shape the opening journey through Thornvale."
+            "A dark-fantasy tactical RPG about Caelis, a survivor crossing a world destabilized by Shimmers and six divided gods. "
+            "Deliberate grid combat, difficult choices, survival pressure, and exploration without a glowing trail shape the journey through Thornvale and beyond."
         ),
         "facts_heading": "AT A GLANCE",
         "facts": [
@@ -70,7 +70,7 @@ CONTENT = {
         "title": "プレス向けファクトシート",
         "locale": "日本語",
         "game_title": "生命の揺籃",
-        "pitch": "生命の揺籃は、答えを求める歴戦の戦士カエリスが〈針〉を追うことになるダークファンタジー戦術RPGです。慎重なグリッド戦闘、目に見える結果を生む選択、そして道標に頼らない探索が、ソーンヴェイルでの旅を形作ります。",
+        "pitch": "『生命の揺籃』は、〈シマー〉によって不安定になり、六柱の神々の思惑が交錯する世界を進む生存者カエリスを描くダークファンタジー戦術RPGです。慎重なグリッド戦闘、困難な選択、心身への圧力、そして光る道標に頼らない探索が、ソーンヴェイルから始まる旅を形作ります。",
         "facts_heading": "基本情報",
         "facts": [
             ("ジャンル", "ダークファンタジーRPG / 戦術RPG / ターン制戦術"),
@@ -97,7 +97,7 @@ CONTENT = {
         "title": "프레스 팩트 시트",
         "locale": "한국어",
         "game_title": "생명의 요람",
-        "pitch": "생명의 요람은 해답을 찾던 노련한 전사 카엘리스가 바늘을 추적하게 되는 다크 판타지 전술 RPG입니다. 신중한 그리드 전투, 눈에 보이는 결과를 남기는 선택, 표식에 의존하지 않는 탐험이 손베일에서의 여정을 결정합니다.",
+        "pitch": "생명의 요람은 시머로 불안정해지고 서로 다른 뜻을 지닌 여섯 신이 개입하는 세계를 헤쳐 나가는 생존자 카엘리스의 다크 판타지 전술 RPG입니다. 신중한 그리드 전투, 어려운 선택, 생존 압박, 빛나는 길표시 없는 탐험이 손베일에서 시작되는 여정을 이끕니다.",
         "facts_heading": "기본 정보",
         "facts": [
             ("장르", "다크 판타지 RPG / 전술 RPG / 턴제 전술"),
@@ -124,7 +124,7 @@ CONTENT = {
         "title": "媒体资料单",
         "locale": "简体中文",
         "game_title": "生命摇篮",
-        "pitch": "生命摇篮是一款黑暗奇幻战术角色扮演游戏。久经沙场的战士凯利斯在寻找答案的过程中踏上了追寻「针」的旅途。审慎的网格战斗、带来可见后果的选择，以及没有发光路线指引的探索，共同塑造了索恩维尔的开篇旅程。",
+        "pitch": "《生命摇篮》是一款黑暗奇幻战术角色扮演游戏，讲述幸存者凯利斯穿行于一个被“微光”撕裂、又受到六位立场相悖的神明影响的世界。审慎的网格战斗、艰难的选择、生存压力，以及没有发光路线指引的探索，共同塑造了从索恩维尔开始的旅程。",
         "facts_heading": "基本信息",
         "facts": [
             ("类型", "黑暗奇幻RPG / 战术RPG / 回合制战术"),
@@ -151,7 +151,7 @@ CONTENT = {
         "title": "媒體資料單",
         "locale": "繁體中文",
         "game_title": "生命搖籃",
-        "pitch": "生命搖籃是一款黑暗奇幻戰術角色扮演遊戲。久經沙場的戰士凱利斯在尋找答案的過程中踏上了追尋「針」的旅途。審慎的網格戰鬥、帶來可見後果的選擇，以及沒有發光路線指引的探索，共同塑造了索恩維爾的開篇旅程。",
+        "pitch": "《生命搖籃》是一款黑暗奇幻戰術角色扮演遊戲，講述倖存者凱利斯穿行於一個被「微光」撕裂、又受到六位立場相悖的神明影響的世界。審慎的網格戰鬥、艱難的選擇、生存壓力，以及沒有發光路線指引的探索，共同塑造了從索恩維爾開始的旅程。",
         "facts_heading": "基本資訊",
         "facts": [
             ("類型", "黑暗奇幻RPG / 戰術RPG / 回合制戰術"),
