@@ -142,6 +142,7 @@
   };
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const mobileStory = window.matchMedia("(max-width: 720px)");
 
   const story = document.querySelector("[data-story]");
   const storyPanels = Array.from(document.querySelectorAll("[data-story-panel]"));
@@ -188,6 +189,12 @@
   const scrollToStoryStage = (stage, behavior = reducedMotion.matches ? "auto" : "smooth") => {
     const step = storySteps[stage];
     if (!step) return;
+    if (mobileStory.matches) {
+      storyScrollTarget = null;
+      window.clearTimeout(storyScrollReleaseTimer);
+      setStoryStage(stage);
+      return;
+    }
     const destination = window.scrollY + step.getBoundingClientRect().top + (step.offsetHeight / 2) - (window.innerHeight / 2);
     storyScrollTarget = stage;
     window.clearTimeout(storyScrollReleaseTimer);
@@ -199,7 +206,7 @@
     }, behavior === "smooth" ? 700 : 120);
   };
 
-  if (story && storySteps.length > 0 && !reducedMotion.matches) {
+  if (story && storySteps.length > 0 && !reducedMotion.matches && !mobileStory.matches) {
     let storyScrollFrame = null;
     const updateStoryFromScroll = () => {
       storyScrollFrame = null;
@@ -245,6 +252,11 @@
 
       const direction = Math.sign(event.deltaY);
       const nextStage = activeStoryStage + direction;
+      if (mobileStory.matches && nextStage >= storySteps.length) {
+        event.preventDefault();
+        document.querySelector("#facts")?.scrollIntoView({ behavior: "auto" });
+        return;
+      }
       if (nextStage < 0 || nextStage >= storySteps.length) return;
 
       event.preventDefault();

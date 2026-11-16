@@ -2143,8 +2143,10 @@ a:hover { color: #efda98; }
   }
 
   .story-sticky::after {
+    top: auto;
+    bottom: calc(100% - 63px - 34svh);
     clip-path: inset(50% 0 0 28%);
-    transform: translate(17px, 29px);
+    transform: translateX(17px);
   }
 
   .story-opening-art {
@@ -2182,12 +2184,9 @@ a:hover { color: #efda98; }
     display: none;
   }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
-}
 
-@media (max-width: 720px) and (max-height: 760px) {
-  .story-sticky::after {
-    transform: translate(17px, 9px);
-  }
+  .story-visual { transition-duration: 260ms; }
+  .story-panel { transition-duration: 240ms; }
 }
 
 @media (max-width: 420px) {
