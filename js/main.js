@@ -192,24 +192,19 @@
   };
 
   if (story && storySteps.length > 0 && !reducedMotion.matches) {
-    if ("IntersectionObserver" in window) {
-      const storyObserver = new IntersectionObserver((entries) => {
-        const visibleStep = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visibleStep) setStoryStage(Number(visibleStep.target.dataset.storyStep));
-      }, { rootMargin: "-42% 0px -42% 0px", threshold: [0, 0.1, 0.5] });
-
-      storySteps.forEach((step) => storyObserver.observe(step));
-    } else {
-      const updateStoryFromScroll = () => {
-        const bounds = story.getBoundingClientRect();
-        const progress = Math.max(0, Math.min(0.999, -bounds.top / Math.max(1, bounds.height - window.innerHeight)));
-        setStoryStage(Math.floor(progress * storySteps.length));
-      };
-      window.addEventListener("scroll", updateStoryFromScroll, { passive: true });
-      updateStoryFromScroll();
-    }
+    let storyScrollFrame = null;
+    const updateStoryFromScroll = () => {
+      storyScrollFrame = null;
+      const bounds = story.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(0.999, -bounds.top / Math.max(1, bounds.height - window.innerHeight)));
+      setStoryStage(Math.floor(progress * storySteps.length));
+    };
+    const scheduleStoryUpdate = () => {
+      if (storyScrollFrame !== null) return;
+      storyScrollFrame = window.requestAnimationFrame(updateStoryFromScroll);
+    };
+    window.addEventListener("scroll", scheduleStoryUpdate, { passive: true });
+    updateStoryFromScroll();
   }
 
   storyJumps.forEach((button) => {
@@ -219,7 +214,8 @@
   });
 
   if (story && storySteps.length > 0 && !reducedMotion.matches) {
-    let inputLocked = false;
+    let wheelLocked = false;
+    let wheelUnlockTimer = null;
     let touchStartY = null;
 
     const storyIsPinned = () => {
@@ -227,8 +223,9 @@
       return bounds.top <= 1 && bounds.bottom >= window.innerHeight - 1;
     };
 
-    const unlockStoryInput = () => {
-      window.setTimeout(() => { inputLocked = false; }, 650);
+    const scheduleWheelUnlock = () => {
+      window.clearTimeout(wheelUnlockTimer);
+      wheelUnlockTimer = window.setTimeout(() => { wheelLocked = false; }, 220);
     };
 
     window.addEventListener("wheel", (event) => {
@@ -239,11 +236,14 @@
       if (nextStage < 0 || nextStage >= storySteps.length) return;
 
       event.preventDefault();
-      if (inputLocked) return;
+      if (wheelLocked) {
+        scheduleWheelUnlock();
+        return;
+      }
 
-      inputLocked = true;
+      wheelLocked = true;
       scrollToStoryStage(nextStage);
-      unlockStoryInput();
+      scheduleWheelUnlock();
     }, { passive: false });
 
     story.addEventListener("touchstart", (event) => {
@@ -259,20 +259,17 @@
       const endY = event.changedTouches[0]?.clientY ?? touchStartY;
       const distance = touchStartY - endY;
       touchStartY = null;
-      if (inputLocked) return;
       if (Math.abs(distance) < 36) return;
 
       const direction = Math.sign(distance);
       const nextStage = activeStoryStage + direction;
       if (nextStage < 0) return;
 
-      inputLocked = true;
       if (nextStage >= storySteps.length) {
-        document.querySelector("#facts")?.scrollIntoView({ behavior: "smooth" });
+        document.querySelector("#facts")?.scrollIntoView({ behavior: "auto" });
       } else {
-        scrollToStoryStage(nextStage);
+        scrollToStoryStage(nextStage, "auto");
       }
-      unlockStoryInput();
     }, { passive: true });
 
     story.addEventListener("touchcancel", () => { touchStartY = null; }, { passive: true });

@@ -2118,6 +2118,35 @@ a:hover { color: #efda98; }
 @media (max-width: 720px) {
   .wordmark img { width: 60px; height: 60px; }
 
+  .story-sticky::before,
+  .story-sticky::after {
+    content: "";
+    position: absolute;
+    top: 78px;
+    left: 4vw;
+    z-index: 3;
+    width: 92vw;
+    aspect-ratio: 1232 / 706;
+    background: url("../assets/logo/CradleOfLife_MainLogo_1232x706.png") center / 100% auto no-repeat;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 600ms ease;
+  }
+
+  .first-impression[data-story-stage="0"] .story-sticky::before,
+  .first-impression[data-story-stage="0"] .story-sticky::after {
+    opacity: 1;
+  }
+
+  .story-sticky::before {
+    clip-path: inset(0 42% 55% 0);
+  }
+
+  .story-sticky::after {
+    clip-path: inset(50% 0 0 28%);
+    transform: translate(17px, 29px);
+  }
+
   .story-opening-art {
     background-image: url("../assets/key-art/CradleOfLife_LibraryHero_3840x1240.png");
     background-position: 45% 63px;
@@ -2150,32 +2179,7 @@ a:hover { color: #efda98; }
 
   .story-panel-title { bottom: 5rem; }
   .hero-logo {
-    position: absolute;
-    bottom: calc(100% + 0.25rem);
-    left: 0;
-    display: block;
-    width: 100%;
-    aspect-ratio: 1232 / 706;
-    margin: 0;
-    background: none;
-    transform: none;
-  }
-
-  .hero-logo::before,
-  .hero-logo::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("../assets/logo/CradleOfLife_MainLogo_1232x706.png") center / 100% auto no-repeat;
-  }
-
-  .hero-logo::before {
-    clip-path: inset(0 42% 55% 0);
-  }
-
-  .hero-logo::after {
-    clip-path: inset(50% 0 0 28%);
-    transform: translate(17px, 9px);
+    display: none;
   }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
 }
