@@ -2184,6 +2184,12 @@ a:hover { color: #efda98; }
   .story-panel-title .hero-hook { max-width: 95%; font-size: 0.94rem; }
 }
 
+@media (max-width: 720px) and (max-height: 760px) {
+  .story-sticky::after {
+    transform: translate(17px, 9px);
+  }
+}
+
 @media (max-width: 420px) {
   .wordmark img { width: 56px; height: 56px; }
   .story-panel-title { bottom: 4.8rem; }

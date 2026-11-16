@@ -150,6 +150,8 @@
   const storyJumps = Array.from(document.querySelectorAll("[data-story-jump]"));
   const storyScrollCue = document.querySelector(".story-scroll-cue");
   let activeStoryStage = 0;
+  let storyScrollTarget = null;
+  let storyScrollReleaseTimer = null;
 
   const setStoryStage = (stage) => {
     const nextStage = Math.max(0, Math.min(stage, storyPanels.length - 1));
@@ -187,14 +189,24 @@
     const step = storySteps[stage];
     if (!step) return;
     const destination = window.scrollY + step.getBoundingClientRect().top + (step.offsetHeight / 2) - (window.innerHeight / 2);
+    storyScrollTarget = stage;
+    window.clearTimeout(storyScrollReleaseTimer);
     setStoryStage(stage);
     window.scrollTo({ top: destination, behavior });
+    storyScrollReleaseTimer = window.setTimeout(() => {
+      storyScrollTarget = null;
+      window.dispatchEvent(new Event("scroll"));
+    }, behavior === "smooth" ? 700 : 120);
   };
 
   if (story && storySteps.length > 0 && !reducedMotion.matches) {
     let storyScrollFrame = null;
     const updateStoryFromScroll = () => {
       storyScrollFrame = null;
+      if (storyScrollTarget !== null) {
+        setStoryStage(storyScrollTarget);
+        return;
+      }
       const bounds = story.getBoundingClientRect();
       const progress = Math.max(0, Math.min(0.999, -bounds.top / Math.max(1, bounds.height - window.innerHeight)));
       setStoryStage(Math.floor(progress * storySteps.length));
